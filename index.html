@@ -25,16 +25,15 @@
 
 <main>
 
+  <!--=================== Center ===================-->
+
   <section class="main-box">
-
-<!--=================== Center ===================-->
-
      <div class="container">
        <div class="row">
           <div id="center" class="col-md-6 col-md-offset-3 text-center">
-              
+
             <!--========== Clock =========-->
-              
+
              <div class="center-clock">
                <div class="clock">
                  <h1 id="time">
@@ -45,9 +44,9 @@
                  </span>
                </div><!-- .clock -->
              </div><!-- .center-clock -->
-              
+
               <!--========== Greeting =========-->
-              
+
               <div id="greeting">
                 <h2>
                   Good
@@ -59,11 +58,65 @@
                     </span>
                 </h2>
               </div><!-- #greeting -->
-              
-          </div><!-- .col-md-6 .col-md-offset-3 -->
+
+          </div><!-- #center -->
        </div><!-- .row -->
      </div><!-- .container -->
   </section><!-- .main-box -->
+
+  <!--=================== Footer ===================-->
+
+  <section id="footer">
+    <div class="container">
+      <div class="row">
+
+         <!--========== Bottom Left =========-->
+
+         <div id="bottom-left" class="col-md-6">
+            <div id="preferences">
+
+              <div class="dropup">
+                 <i class="fa fa-cog dropdown-toggle" aria-hidden="true" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   <span class="caret"></span>
+                 </i>
+
+                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                   <li><a href="#">Action</a></li>
+                   <li><a href="#">Another action</a></li>
+                   <li><a href="#">Something else here</a></li>
+                   <li role="separator" class="divider"></li>
+                   <li><a href="#">Separated link</a></li>
+                 </ul>
+                </div>
+
+            </div><!-- #preferences -->
+         </div><!-- #bottom-left -->
+
+         <!--========== Bottom Right =========-->
+
+         <div id="bottom-right" class="col-md-6">
+            <div id="todo">
+              <div class="todo-container">
+                <div class="todo-header">
+                  <ul class="todo-list-chooser">
+                    <span class="todo-list-name-wrapper">
+                      <span class="todo-list-name">
+                         Inbox
+                      </span><!-- .todo-list-name -->
+
+                      <i class="fa fa-caret-down" aria-hidden="true"></i>
+
+                      <span class="todo-count"></span><!-- .todo-count -->
+                    </span><!-- .todo-list-name-wrapper -->
+                  </ul><!-- .todo-list-chooser -->
+                </div><!-- .todo-header -->
+              </div><!-- .todo-pane-container -->
+            </div><!-- #todo -->
+         </div><!-- #bottom-right -->
+
+      </div><!-- .row -->
+    </div><!-- .container -->
+  </section>
 
 </main>
 
