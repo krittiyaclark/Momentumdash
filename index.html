@@ -77,39 +77,40 @@
 
               <div class="dropup">
                  <i class="fa fa-cog dropdown-toggle" aria-hidden="true" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   <span class="caret"></span>
                  </i>
 
-                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                 <ul class="dropdown-menu todo-toggle" aria-labelledby="dropdownMenu2">
                    <li><a href="#">Action</a></li>
                    <li><a href="#">Another action</a></li>
                    <li><a href="#">Something else here</a></li>
                    <li role="separator" class="divider"></li>
                    <li><a href="#">Separated link</a></li>
-                 </ul>
-                </div>
+                 </ul><!-- .dropdown-menu -->
+               </div><!-- .dropup -->
 
             </div><!-- #preferences -->
          </div><!-- #bottom-left -->
 
          <!--========== Bottom Right =========-->
 
-         <div id="bottom-right" class="col-md-6">
+         <div id="bottom-right" class="col-md-6 text-right">
             <div id="todo">
               <div class="todo-container">
-                <div class="todo-header">
-                  <ul class="todo-list-chooser">
-                    <span class="todo-list-name-wrapper">
-                      <span class="todo-list-name">
-                         Inbox
-                      </span><!-- .todo-list-name -->
 
-                      <i class="fa fa-caret-down" aria-hidden="true"></i>
+                <div class="dropup">
+                   <span class="dropdown-toggle" aria-hidden="true" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Todo
+                   </span>
 
-                      <span class="todo-count"></span><!-- .todo-count -->
-                    </span><!-- .todo-list-name-wrapper -->
-                  </ul><!-- .todo-list-chooser -->
-                </div><!-- .todo-header -->
+                   <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                     <li><a href="#">Action</a></li>
+                     <li><a href="#">Another action</a></li>
+                     <li><a href="#">Something else here</a></li>
+                     <li role="separator" class="divider"></li>
+                     <li><a href="#">Separated link</a></li>
+                   </ul><!-- .dropdown-menu -->
+                 </div><!-- .dropup -->
+
               </div><!-- .todo-pane-container -->
             </div><!-- #todo -->
          </div><!-- #bottom-right -->
