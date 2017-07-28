@@ -28,8 +28,34 @@
   <!--=================== Center ===================-->
 
   <section id="main-box">
+      
+      <!--========== List & Weather =========-->
+      <div class="container">
+          <div class="row">
+              
+              <!--========== List =========-->
+              <div class="col-md-10">              
+                  <span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">list</span>
+                  <ul class="dropdown-menu">
+                      <li class="dropdown-header">Header</li>
+                      <li><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Other</a></li>
+                  </ul>                  
+              </div> <!-- .col-md-10 -->    
+              
+              <!--========== Weather =========-->
+              <div class="col-md-2 text-right">weather</div>
+              
+          </div> <!--.row-->
+      </div> <!--.container-->
+      
+     <!--========== Clock & Greeting =========--> 
      <div class="container">
-       <div class="row">
+       <div class="row">    
           <div id="center" class="col-md-6 col-md-offset-3 text-center">
 
             <!--========== Clock =========-->
@@ -80,13 +106,9 @@
                 <input type="text" />
 
              </div><!-- .focuses-text -->
-
-          </div><!-- #focuses -->
-       </div><!-- .row -->
-     </div><!-- .container -->
+          </div><!-- #focuses -->                     
+      </div><!-- .container -->         
    </section><!-- #main-box -->
-
-
 
   <!--=================== Footer ===================-->
 
@@ -96,7 +118,7 @@
 
          <!--========== Bottom Left =========-->
 
-         <div id="bottom-left" class="col-md-6">
+         <div id="bottom-left" class="col-md-2">
             <div id="preferences">
 
               <div class="dropup">
@@ -114,29 +136,34 @@
 
             </div><!-- #preferences -->
          </div><!-- #bottom-left -->
-
+         
+         <!--========== Bottom Center =========-->  
+          
+          <div id="bottom-center" class="col-md-8">
+              <p id="quote-text" class=text-center>Be a yardstick of quality. Some people aren't used to an environment where excellence is expected.</p>
+          </div> <!--#bottom-center -->
+          
          <!--========== Bottom Right =========-->
 
-         <div id="bottom-right" class="col-md-6">
+         <div id="bottom-right text-right" class="col-md-2">             
             <div id="todo">
               <div class="todo-container">
-
+                  
                 <div class="dropup">
                    <span class="dropdown-toggle" aria-hidden="true" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Todo
                    </span>
-
-                   <ul class="dropdown-menu todo-toggle" aria-labelledby="dropdownMenu2">
+                   <ul class="dropdown-menu dropdown-menu-right">
                      <li><a href="#">Action</a></li>
                      <li><a href="#">Another action</a></li>
                      <li><a href="#">Something else here</a></li>
                      <li role="separator" class="divider"></li>
                      <li><a href="#">Separated link</a></li>
-                   </ul><!-- .dropdown-menu -->
+                   </ul><!-- .dropdown-menu -->                     
                  </div><!-- .dropup -->
 
               </div><!-- .todo-pane-container -->
-            </div><!-- #todo -->
+            </div><!-- #todo -->             
          </div><!-- #bottom-right -->
 
       </div><!-- .row -->
