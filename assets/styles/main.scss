@@ -1,10 +1,67 @@
-// No SCSS style yet.
+$font-size-h1: 1050%;
+$font-weight-h1: bold;
+$font-size-h2: 300%;
+$font-weight-h2: bold;
+$font-size-h3: 187.5%;
+$font-weight-h3: bold;
 
 body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+}
+
+#center {
+    display: block;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    h1#time {
+      font-size: $font-size-h1;
+      font-weight: $font-weight-h1;
+    }
+    .format {
+      position: absolute;
+      left: 102%;
+      bottom: 9%;
+      font-size: 150%;
+      opacity: 0;
+    }
+    h2 {
+      font-size: $font-size-h2;
+      font-weight: $font-weight-h2;
+      line-height: 1;
+    }
+}
+
+#center-below {
+    display: block;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    h3 {
+      font-size: $font-size-h3;
+      font-weight: $font-weight-h3;
+    }
+    input {
+      width: 450px;
+      border-bottom-width: 2px;
+      display: block;
+      background: 0;
+      border: 0;
+      border-bottom: 3px solid #fff;
+      color: #fff;
+      font-weight: 500;
+      outline: 0;
+      margin: 0 auto;;
+    }
 }
 
 #todo {

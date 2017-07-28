@@ -2,7 +2,52 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh; }
+  min-height: 100vh;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0; }
+
+#center {
+  display: block;
+  top: 50%;
+  width: 100%;
+  text-align: center; }
+  #center h1#time {
+    font-size: 1050%;
+    font-weight: bold; }
+  #center .format {
+    position: absolute;
+    left: 102%;
+    bottom: 9%;
+    font-size: 150%;
+    opacity: 0; }
+  #center h2 {
+    font-size: 300%;
+    font-weight: bold;
+    line-height: 1; }
+
+#center-below {
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center; }
+  #center-below h3 {
+    font-size: 187.5%;
+    font-weight: bold; }
+  #center-below input {
+    width: 450px;
+    border-bottom-width: 2px;
+    display: block;
+    background: 0;
+    border: 0;
+    border-bottom: 3px solid #fff;
+    color: #fff;
+    font-weight: 500;
+    outline: 0;
+    margin: 0 auto; }
 
 #todo {
   float: right;
