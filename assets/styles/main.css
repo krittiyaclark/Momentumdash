@@ -1,13 +1,14 @@
 body {
+  background-image: url("https://source.unsplash.com/collection/1949");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-  position: fixed;
   right: 0;
   left: 0;
   bottom: 0;
-  top: 0; }
+  top: 0;
+  color: #fff; }
 
 #center {
   display: block;
@@ -52,3 +53,8 @@ body {
 #todo {
   float: right;
   right: 0; }
+
+.dropdown-menu {
+  background-color: #384047; }
+  .dropdown-menu li a {
+    color: #7b8b8e; }
