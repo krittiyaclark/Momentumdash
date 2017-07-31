@@ -1,19 +1,7 @@
 @import 'variables';
+@import '_normalize';
 @import 'mixins';
-
-
-
-body {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    position: fixed;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    top: 0;
-}
+@import '_background';
 
 #center {
     display: block;
