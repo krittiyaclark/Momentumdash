@@ -1,21 +1,7 @@
-$font-size-h1: 1050%;
-$font-weight-h1: bold;
-$font-size-h2: 300%;
-$font-weight-h2: bold;
-$font-size-h3: 187.5%;
-$font-weight-h3: bold;
-
-body {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    position: fixed;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    top: 0;
-}
+@import 'variables';
+@import '_normalize';
+@import 'mixins';
+@import '_background';
 
 #center {
     display: block;
@@ -67,4 +53,11 @@ body {
 #todo {
    float: right;
    right: 0;
+}
+
+.dropdown-menu {
+  background-color: $color-drak-grey;
+  li a {
+    color: $color-grey;
+  }
 }
