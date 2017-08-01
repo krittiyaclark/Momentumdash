@@ -28,7 +28,5 @@ $(document).ready(function() {
     }); // end tweet-icon
     
     
-    
-
     getQuote();
 }); // end function
