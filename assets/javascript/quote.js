@@ -8,7 +8,7 @@ $(document).ready(function() {
 
            $('#quotation').append(" \ " + data.quoteText);
            $('#author').append("-- " + data.quoteAuthor);
-       }); // end ajax
+       }); // end getJSON
     }; // end getQuote
 
 
@@ -21,11 +21,11 @@ $(document).ready(function() {
                    var tweetAuthor = $('#author').html();
                    var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweetQuote + "\n" + tweetAuthor);
                    window.open(url)
-               });
-           });
+               }); // end share-quote
+           }); // end tweet-icon
 
-    });
-    })
+        }); // end quotation
+    }); // end tweet-icon
     
     
     
