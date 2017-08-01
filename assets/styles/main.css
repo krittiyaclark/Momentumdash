@@ -451,3 +451,17 @@ body {
   background-color: #384047; }
   .dropdown-menu li a {
     color: #7b8b8e; }
+
+.quote {
+  border-left: 0;
+  margin-top: 30px; }
+  .quote #quotation::before {
+    font-family: FontAwesome;
+    content: "\f10d"; }
+
+.tweet a, .tweet a:active, .tweet a:hover, .tweet a:visited {
+  color: #fff;
+  text-decoration: none; }
+
+.tweet a:active, .tweet a:hover {
+  color: #7b8b8e; }
