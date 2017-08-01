@@ -465,3 +465,6 @@ body {
 
 .tweet a:active, .tweet a:hover {
   color: #7b8b8e; }
+
+.cornerPadTop {
+  padding-top: 20px; }
