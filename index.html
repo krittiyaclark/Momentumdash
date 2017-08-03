@@ -165,6 +165,9 @@
          <!--========== Bottom Right =========-->
 
          <div id="bottom-right text-right" class="col-md-2">
+
+            <!--========== Todo =========-->
+
             <div id="todo">
               <div class="todo-container">
 
@@ -173,16 +176,27 @@
                       Todo
                    </span>
 
-                   <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
-                     <li><a href="#">Action</a></li>
-                     <li><a href="#">Another action</a></li>
-                     <li><a href="#">Something else here</a></li>
-                     <li role="separator" class="divider"></li>
-                     <li><a href="#">Separated link</a></li>
-                   </ul><!-- .dropdown-menu -->
+                   <header id="dropdown-menu-todo" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+                     <input type="text" placeholder="Enter your todo" id="item" />
+                     <button id="add">
+                      <i class="fa fa-plus" aria-hidden="true"></i>
+                     </button>
+                   </header><!-- .dropdown-menu -->
+
+                  
+                    <div class="container-todo-list">
+                      
+                      <!-- Uncompleted tasks -->
+                      <ul class="todo" id="todoList"></ul>
+
+                      <!-- Completed tasks -->
+                      <ul class="todo" id="completed"></ul>
+                      
+                  </div><!-- .container-todo-list -->
+
                  </div><!-- .dropup -->
 
-              </div><!-- .todo-pane-container -->
+              </div><!-- .todo-container -->
             </div><!-- #todo -->
          </div><!-- #bottom-right -->
 
@@ -197,6 +211,7 @@
  <script src="assets/javascript/main.js" type="text/javascript"></script>
  <script src="assets/javascript/quote.js" type="text/javascript"></script>
  <script src="assets/javascript/weather.js" type="text/javascript"></script>
+ <script src="assets/javascript/todo.js" type="text/javascript"></script>
 
 </body>
 

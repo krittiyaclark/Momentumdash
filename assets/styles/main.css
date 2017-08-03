@@ -468,3 +468,83 @@ body {
 
 .cornerPadTop {
   padding-top: 20px; }
+
+#dropdown-menu-todo {
+  width: 300px;
+  height: 68px;
+  padding: 15px;
+  z-index: 5;
+  -webkit-box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+  -moz-box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+  box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15); }
+  #dropdown-menu-todo input {
+    width: 100%;
+    height: 35px;
+    float: left;
+    color: #fff;
+    font-size: 15px;
+    text-indent: 18px;
+    padding: 0 60px 0 0;
+    background: rgba(255, 255, 255, 0.2);
+    border: 0;
+    outline: none;
+    -webkit-border-radius: 5px 25px 25px 5px;
+    -moz-border-radius: 5px 25px 25px 5px;
+    -ms-border-radius: 5px 25px 25px 5px;
+    border-radius: 5px 25px 25px 5px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: rgba(255, 255, 255, 0.75); }
+    #dropdown-menu-todo input:-moz-placeholder {
+      /* Firefox 18- */ }
+    #dropdown-menu-todo input::-moz-placeholder {
+      /* Firefox 19+ */ }
+  #dropdown-menu-todo #add {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+    background: #fff;
+    border: 0px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    border-radius: 25px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none; }
+  #dropdown-menu-todo i {
+    color: #7b8b8e;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -6px 0 0 -8px; }
+
+.container-todo-list {
+  width: 100%; }
+  .container-todo-list ul.todo {
+    width: 100%; }
+  .container-todo-list li {
+    width: 100%;
+    float: left;
+    min-height: 50px;
+    font-size: 15px;
+    font-weight: #fff;
+    color: #7b8b8e;
+    line-height: 21px;
+    margin: 0 0 10px 0;
+    padding: 14px 100px 14px 14px;
+    word-break: break-word; }
+  .container-todo-list :last-of-type {
+    margin: 0; }

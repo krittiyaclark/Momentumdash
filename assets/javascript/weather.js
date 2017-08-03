@@ -14,7 +14,7 @@ window.onload = function() {
             $.getJSON(url, function(data) {
                 var city = data.name;
                 var temperatureK = data.main.temp;
-                document.getElementById("cityselector").innerHTML = city;
+                document.getElementsByClassName("cityClass").innerHTML = city;
             })    
         }); 
       
