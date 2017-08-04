@@ -1,4 +1,4 @@
-@import 'variables';
+@import '_variables';
 @import '_normalize';
 @import 'mixins';
 @import '_background';
@@ -85,6 +85,87 @@
     padding-top: 20px;
 }
 
+#dropdown-menu-todo {
+  width: 300px;
+  height: 68px;
+
+  padding: 15px;
+  z-index: 5;
+  @include box-shadow(0px 2px 4px rgba(44, 62, 80, 0.15));
+  input {
+    width: 100%;
+    height: 35px;
+    float: left;
+    color: $color-white;
+    font-size: $font-size;
+    text-indent: 18px;
+    padding: 0 60px 0 0;
+    background: rgba(255, 255, 255, 0.2);
+    border: 0;
+    outline: none;
+    @include border-radius(5px 25px 25px 5px);
+    @include box-shadow(none);
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    @include placeholder();
+    color: rgba(255, 255, 255, 0.75);
+  }
+ 
+    #add {
+      width: 35px;
+      height: 35px;
+
+      position:absolute;
+      top:15px;
+      right:15px;
+      z-index:2;
+
+      background: $color-white;
+      border: 0px;
+      @include border-radius(25px);
+      @include box-shadow(none);
+      outline: none;
+      cursor: pointer;
+
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    }
+      i {
+        color: $color-grey;
+        width: 16px;
+        height: 16px;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        margin: -6px 0 0 -8px;
+      }
+}
+
+.container-todo-list {
+  width: 100%;
+    ul.todo {
+      width: 100%;
+    }
+      li {
+        width: 100%;
+        float: left;
+        min-height: 50px;
+        font-size: $font-size;
+        font-weight: $color-white;
+        color: $color-grey;
+        line-height: 21px;
+        margin: 0 0 10px 0;
+        padding: 14px 100px 14px 14px;
+        word-break: break-word;
+      }
+        :last-of-type {
+          margin: 0;
+        }
+}
+
 .v-adjust {    
   display: flex;
   flex-direction: row; 
@@ -104,4 +185,4 @@
 #bottom-right {
     justify-content: flex-end;
 //    margin-bottom: 5%;
-} 
+}
