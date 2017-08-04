@@ -469,9 +469,13 @@ body {
 .cornerPadTop {
   padding-top: 20px; }
 
+.todo-container {
+  display: block; }
+  .todo-container .dropdown-toggle {
+    cursor: pointer; }
+
 #dropdown-menu-todo {
   width: 300px;
-  height: 68px;
   padding: 15px;
   z-index: 5;
   -webkit-box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
@@ -481,10 +485,11 @@ body {
     width: 100%;
     height: 35px;
     float: left;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.75);
     font-size: 15px;
     text-indent: 18px;
     padding: 0 60px 0 0;
+    margin-bottom: 25px;
     background: rgba(255, 255, 255, 0.2);
     border: 0;
     outline: none;
@@ -496,8 +501,7 @@ body {
     -moz-box-shadow: none;
     box-shadow: none;
     -webkit-appearance: none;
-    -moz-appearance: none;
-    color: rgba(255, 255, 255, 0.75); }
+    -moz-appearance: none; }
     #dropdown-menu-todo input:-moz-placeholder {
       /* Firefox 18- */ }
     #dropdown-menu-todo input::-moz-placeholder {
@@ -543,8 +547,41 @@ body {
     font-weight: #fff;
     color: #7b8b8e;
     line-height: 21px;
+    list-style: none;
+    background: #384047;
+    position: relative;
     margin: 0 0 10px 0;
     padding: 14px 100px 14px 14px;
-    word-break: break-word; }
-  .container-todo-list :last-of-type {
-    margin: 0; }
+    word-break: break-word;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+    .container-todo-list li:nth-child(even) {
+      background: #c9cfd4; }
+    .container-todo-list li:nth-child(odd) {
+      background: #f9fafb; }
+    .container-todo-list li:last-of-type {
+      margin: 0; }
+    .container-todo-list li .buttons {
+      width: 100px;
+      height: 50px;
+      position: absolute;
+      top: 0;
+      right: 0; }
+      .container-todo-list li .buttons button {
+        width: 50px;
+        height: 50px;
+        float: left;
+        background: none;
+        position: relative;
+        border: 0px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        outline: none;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none; }

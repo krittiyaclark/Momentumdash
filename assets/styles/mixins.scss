@@ -29,3 +29,15 @@
         @content;
     }
 }
+
+@mixin even(){
+  &:nth-child(even) {
+    @content
+  }
+}
+
+@mixin odd(){
+  &:nth-child(odd) {
+    @content
+  }
+}
