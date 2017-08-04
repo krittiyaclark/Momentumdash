@@ -33,7 +33,7 @@
           <div class="row cornerPadTop">
 
               <!--========== List =========-->
-              <div class="col-md-10">
+              <div class="col-sm-10">
                   <span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                   aria-expanded="false">list</span>
                   <ul class="dropdown-menu">
@@ -47,10 +47,17 @@
               </div><!-- .col-md-10 -->
 
               <!--========== Weather =========-->
-              <div class="col-md-2 text-right" id="citySelector">weather</div>
-
+              <div class="col-sm-2"> <!-- text-right-->
+                <div class = "flex-container">
+                  <div class="item"><img id="weatherIcon" alt="weather icon"></div>
+                  <div class="item" id="tempId"></div><span class="degree">°</span>
+                </div> 
+                <div class = "flex-container">
+                  <div class="item" id="cityId"></div>
+                </div>                 
+              </div> <!-- .col-sm-2 -->
           </div><!--.row-->
-      </div><!--.container-->
+      </div><!--.container-fluid-->
   </section><!-- #top -->
 
   <!--=================== Center ===================-->

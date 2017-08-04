@@ -575,8 +575,45 @@ body {
     -ms-flex-pack: center;
     justify-content: center; }
 
+#bottom-left {
+  margin-bottom: 3%; }
+
 #bottom-right {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-bottom: 3%; }
+
+.flex-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
   justify-content: flex-end; }
+
+.item {
+  margin-left: 10px; }
+
+#weatherIcon {
+  max-width: 30px;
+  padding-top: 5px; }
+
+#tempId {
+  font-size: x-large; }
+
+.degree {
+  font-size: x-large; }
+
+#cityId {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: x-small; }

@@ -13,14 +13,46 @@ window.onload = function() {
     
             $.getJSON(url, function(data) {
                 var city = data.name;
-                var temperatureK = data.main.temp;
+                var tempC = Math.round(data.main.temp);
+                var tempF = Math.round(tempC * 1.8 + 32);
+                var mainDescrip = data.weather[0].main;
 
-                document.getElementById("citySelector").innerHTML = city;
+                document.getElementById("cityId").innerHTML = city;
+                document.getElementById("tempId").innerHTML = tempF;
 
+                switch (mainDescrip) {
+                    case "Clear":
+                    document.getElementById("weatherIcon").src = "https://res.cloudinary.com/t3unfxn28/image/upload/v1501813445/Momentum/simple_weather_icon_01.png";
+                    break;
+                    case "Clouds":
+                    document.getElementById("weatherIcon").src = "https://res.cloudinary.com/t3unfxn28/image/upload/v1501813445/Momentum/simple_weather_icon_06.png";
+                    break;
+                    case "Atmosphere":
+                    document.getElementById("weatherIcon").src = "https://res.cloudinary.com/t3unfxn28/image/upload/v1501813445/Momentum/simple_weather_icon_10.png";
+                    break;
+                    case "Drizzle":
+                    document.getElementById("weatherIcon").src = "https://res.cloudinary.com/t3unfxn28/image/upload/v1501813445/Momentum/simple_weather_icon_22.png";
+                    break;
+                    case "Rain":
+                    document.getElementById("weatherIcon").src = "https://res.cloudinary.com/t3unfxn28/image/upload/v1501813445/Momentum/simple_weather_icon_23.png";
+                    break;
+                    case "Thunderstorm":
+                    document.getElementById("weatherIcon").src = "https://res.cloudinary.com/t3unfxn28/image/upload/v1501813445/Momentum/simple_weather_icon_27.png";
+                    break;
+                    case "Snow":
+                    document.getElementById("weatherIcon").src = "https://res.cloudinary.com/t3unfxn28/image/upload/v1501813445/Momentum/simple_weather_icon_24.png";
+                    break;
+                    case "Extreme":
+                    document.getElementById("weatherIcon").src = "https://res.cloudinary.com/t3unfxn28/image/upload/v1501813445/Momentum/simple_weather_icon_24.png";
+                    break;
+                    case "Additional":
+                    document.getElementById("weatherIcon").src = "https://res.cloudinary.com/t3unfxn28/image/upload/v1501813445/Momentum/simple_weather_icon_03.png";
+                    break;
+                    default:
+                    document.getElementById("weatherIcon").src = "https://res.cloudinary.com/t3unfxn28/image/upload/v1501813445/Momentum/simple_weather_icon_01.png";
+                    } 
 
-            })    
-        }); 
-      
+            });        
+        });    
     } 
-
-}
+} 

@@ -179,10 +179,40 @@
 }
 
 #bottom-left {
-//    margin-bottom: 5%;
+    margin-bottom: 3%;
 }
 
 #bottom-right {
     justify-content: flex-end;
-//    margin-bottom: 5%;
+    margin-bottom: 3%;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  // margin-bottom: 5px;
+}
+
+.item {
+  margin-left: 10px;
+}
+
+#weatherIcon {
+  max-width: 30px;
+  padding-top: 5px;
+}
+
+#tempId {
+  font-size: x-large;
+}
+
+.degree {
+  font-size: x-large;
+}
+
+#cityId {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: x-small;
 }
