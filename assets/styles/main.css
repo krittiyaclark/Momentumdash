@@ -474,6 +474,10 @@ body {
   .todo-container .dropdown-toggle {
     cursor: pointer; }
 
+.dropup #dropdown-menu-todo {
+  display: block;
+  position: relative; }
+
 #dropdown-menu-todo {
   width: 300px;
   padding: 15px;
@@ -536,52 +540,103 @@ body {
     margin: -6px 0 0 -8px; }
 
 .container-todo-list {
-  width: 100%; }
+  width: 100%;
+  float: left;
+  padding: 15px; }
   .container-todo-list ul.todo {
-    width: 100%; }
-  .container-todo-list li {
     width: 100%;
-    float: left;
-    min-height: 50px;
-    font-size: 15px;
-    font-weight: #fff;
-    color: #7b8b8e;
-    line-height: 21px;
-    list-style: none;
-    background: #384047;
-    position: relative;
-    margin: 0 0 10px 0;
-    padding: 14px 100px 14px 14px;
-    word-break: break-word;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    border-radius: 5px;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none; }
-    .container-todo-list li:nth-child(even) {
-      background: #c9cfd4; }
-    .container-todo-list li:nth-child(odd) {
-      background: #f9fafb; }
-    .container-todo-list li:last-of-type {
-      margin: 0; }
-    .container-todo-list li .buttons {
-      width: 100px;
-      height: 50px;
-      position: absolute;
-      top: 0;
-      right: 0; }
-      .container-todo-list li .buttons button {
-        width: 50px;
+    padding-left: 0px; }
+    .container-todo-list ul.todo li {
+      width: 100%;
+      float: left;
+      min-height: 50px;
+      font-size: 15px;
+      font-weight: #fff;
+      color: #7b8b8e;
+      line-height: 21px;
+      list-style: none;
+      background: #384047;
+      position: relative;
+      margin: 0 0 10px 0;
+      padding: 14px 100px 14px 14px;
+      word-break: break-word;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border-radius: 5px;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
+      .container-todo-list ul.todo li:nth-child(even) {
+        background: #c9cfd4; }
+      .container-todo-list ul.todo li:nth-child(odd) {
+        background: #f9fafb; }
+      .container-todo-list ul.todo li:last-of-type {
+        margin: 0; }
+      .container-todo-list ul.todo li .buttons {
+        width: 100px;
         height: 50px;
-        float: left;
-        background: none;
-        position: relative;
-        border: 0px;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        outline: none;
-        cursor: pointer;
-        -webkit-appearance: none;
-        -moz-appearance: none; }
+        position: absolute;
+        top: 0;
+        right: 0;
+        line-height: 50px; }
+        .container-todo-list ul.todo li .buttons button {
+          width: 50px;
+          height: 50px;
+          float: left;
+          background: none;
+          position: relative;
+          border: 0px;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+          outline: none;
+          cursor: pointer;
+          -webkit-appearance: none;
+          -moz-appearance: none; }
+          .container-todo-list ul.todo li .buttons button i {
+            width: 21px;
+            height: 21px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: -11px 0 0 -11px; }
+          .container-todo-list ul.todo li .buttons button.complete i {
+            -webkit-border-radius: 11px;
+            -moz-border-radius: 11px;
+            -ms-border-radius: 11px;
+            border-radius: 11px;
+            border: 1.5px solid #25b99a;
+            -webkit-transition: background 0.2s ease;
+            -o-transition: background 0.2s ease;
+            transition: background 0.2s ease; }
+            .container-todo-list ul.todo li .buttons button.complete i.complete:hover i {
+              background: rgba(37, 185, 154, 0.7);
+              cursor: pointer; }
+          .container-todo-list ul.todo li .buttons button.remove:hover i {
+            cursor: pointer; }
+        .container-todo-list ul.todo li .buttons .completed, .container-todo-list ul.todo li .buttons .remove {
+          padding: 0 5px 0;
+          float: right; }
+    .container-todo-list ul.todo#completed {
+      position: relative;
+      padding: 60px 0 0 0; }
+    .container-todo-list ul.todo#completed:before {
+      content: '';
+      width: 150px;
+      height: 1px;
+      background: #d8e5e0;
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      margin: 0 0 0 -75px; }
+    .container-todo-list ul.todo:empty:after {
+      content: 'You have nothing to-do!';
+      margin: 15px 0 0 0; }
+    .container-todo-list ul.todo #completed:empty:after {
+      content: 'You have yet to complete any tasks.'; }
+    .container-todo-list ul.todo#todo:after, .container-todo-list ul.todo#completed:after {
+      width: 100%;
+      display: block;
+      text-align: center;
+      font-size: 12px;
+      color: #aaa; }

@@ -4,8 +4,8 @@ var data = {
     completed: []
 };
 
-var removeIcon = '<i class="fa fa-trash-o" aria-hidden="true"></i>';
-var completedIcon = '<i class="fa fa-check-circle-o" aria-hidden="true"></i>';
+var removeIcon = '<i class="fa fa-lg fa-trash-o" aria-hidden="true"></i>';
+var completedIcon = '<i class="fa fa-lg fa-check-circle-o" aria-hidden="true"></i>';
 
 // User clicked on the button
 // If there is any text in the item field, add text to the todo list

@@ -97,7 +97,19 @@
     cursor: pointer;
   }
 }
-    
+
+.dropup #dropdown-menu-todo {
+  display: block;
+  position: relative;
+}
+
+// #dropup-custom {
+//   display: block;
+//   top: auto;
+//     bottom: 100%;
+//     margin-bottom: 2px;
+// }
+
 #dropdown-menu-todo {
   width: 300px;
   //height: 100%;
@@ -159,9 +171,11 @@
 
 .container-todo-list {
   width: 100%;
+  float: left;
+  padding: 15px;
     ul.todo {
       width: 100%;
-    }
+      padding-left: 0px;
       li {
         width: 100%;
         float: left;
@@ -197,6 +211,7 @@
                         position: absolute;
                         top: 0;
                         right: 0;
+                        line-height: 50px;
 
                         button {
                             width: 50px;
@@ -211,8 +226,80 @@
 
                             -webkit-appearance: none;
                             -moz-appearance: none;
+                            i {
+                            width: 21px;
+                            height: 21px;
+
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+
+                            margin: -11px 0 0 -11px;
+                          }
+
+                            &.complete i {
+                                @include border-radius(11px);
+                                border: 1.5px solid #25b99a;
+
+                                transition: background 0.2s ease;
+
+                                &.complete:hover i {
+                                    background: rgba(37, 185, 154, 0.7);
+                                    cursor: pointer;
+                                  }
+
+                                }
+
+                                &.remove:hover i {
+                                  cursor: pointer;
+                                } 
+
+                          }
+                          
+                           .completed, .remove {
+                              padding: 0 5px 0;
+                              float: right;
                             }
                       }          
-         }      
-}
+                } 
+
+                &#completed {
+                  position: relative;
+                  padding: 60px 0 0 0;
+                }
+                &#completed:before {
+                  content: '';
+                  width: 150px;
+                  height: 1px;
+                  background: #d8e5e0;
+
+                  position: absolute;
+                  top: 30px;
+                  left: 50%;
+
+                  margin: 0 0 0 -75px;
+                }
+
+                &:empty:after {
+                    content: 'You have nothing to-do!';
+                    margin: 15px 0 0 0;
+                  }
+
+                 & #completed:empty:after {
+                    content: 'You have yet to complete any tasks.';
+                  }
+
+                  &#todo:after,
+                  &#completed:after {
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                    font-size: 12px;
+                    color: #aaa;
+                  }
+
+
+            }
+           
+  }
 
