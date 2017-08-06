@@ -55,6 +55,7 @@
 #todo {
    float: right;
    right: 0;
+   position: relative;
 }
 
 .dropdown-menu {
@@ -92,51 +93,41 @@
 //######### Todo #########//
 
 .todo-container {
-  display: block;
-  .dropdown-toggle {
-    cursor: pointer;
-  }
-}
-
-.dropup #dropdown-menu-todo {
-  display: block;
   position: relative;
+  display: flex;
 }
-
-// #dropup-custom {
-//   display: block;
-//   top: auto;
-//     bottom: 100%;
-//     margin-bottom: 2px;
-// }
-
-#dropdown-menu-todo {
-  width: 300px;
-  //height: 100%;
-
+.todo-pane {
+  background: $color-drak-grey;
+  right: 3px;
+  text-align: left;
+  display: none;
+  bottom: 50px;
+  position: relative;
   padding: 15px;
-  z-index: 5;
-  @include box-shadow(0px 2px 4px rgba(44, 62, 80, 0.15));
-  input {
-    width: 100%;
-    height: 35px;
-    float: left;
-    color: rgba(255, 255, 255, 0.75);
-    font-size: $font-size;
-    text-indent: 18px;
-    padding: 0 60px 0 0;
-    margin-bottom:  25px;
-    background: rgba(255, 255, 255, 0.2);
-    border: 0;
-    outline: none;
-    @include border-radius(5px 25px 25px 5px);
-    @include box-shadow(none);
+  z-index: 9999;
+  @include border-radius(5px);
+     input {
+      height: 36px;
+      width: 100%;
+      padding: 6px 15px 7px;
 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    @include placeholder();
-  }
- 
+      float: left;
+      color: rgba(255, 255, 255, 0.75);
+      font-size: $font-size;
+      text-indent: 18px;
+      padding: 0 60px 0 0;
+      margin-bottom:  25px;
+      background: rgba(255, 255, 255, 0.2);
+      border: 0;
+      outline: none;
+      @include border-radius(5px 25px 25px 5px);
+      @include box-shadow(none);
+
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      @include placeholder();
+    }
+
     #add {
       width: 35px;
       height: 35px;
@@ -160,22 +151,25 @@
         color: $color-grey;
         width: 16px;
         height: 16px;
-
-        position: absolute;
-        top: 50%;
-        left: 50%;
-
-        margin: -6px 0 0 -8px;
       }
+
+}
+
+.toggle {
+  position: absolute;
+  top: 0;
+  padding-right: 15px;
+  right: 0;
 }
 
 .container-todo-list {
   width: 100%;
   float: left;
-  padding: 15px;
+ 
     ul.todo {
       width: 100%;
       padding-left: 0px;
+
       li {
         width: 100%;
         float: left;
@@ -226,16 +220,17 @@
 
                             -webkit-appearance: none;
                             -moz-appearance: none;
+                            
                             i {
-                            width: 21px;
-                            height: 21px;
+                              width: 21px;
+                              height: 21px;
 
-                            position: absolute;
-                            top: 0;
-                            left: 0;
+                              position: absolute;
+                              top: 0;
+                              left: 0;
 
-                            margin: -11px 0 0 -11px;
-                          }
+                              margin: -11px 0 0 -11px;
+                            }
 
                             &.complete i {
                                 @include border-radius(11px);
@@ -246,6 +241,7 @@
                                 &.complete:hover i {
                                     background: rgba(37, 185, 154, 0.7);
                                     cursor: pointer;
+                                    color: #000;
                                   }
 
                                 }
@@ -259,6 +255,11 @@
                            .completed, .remove {
                               padding: 0 5px 0;
                               float: right;
+                            }
+
+                            // Not working
+                            .completed i, .remove i {
+                              cursor: pointer;
                             }
                       }          
                 } 
@@ -302,4 +303,3 @@
             }
            
   }
-

@@ -2,18 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Momentumdash</title>
+  <meta charset="UTF-8">
+  <title>Momentumdash</title>
 
-    <meta name="description" content="Chingu Voyage Build-to-learn project build Momentum dash. Chrome extension use Bootstrap, HTML5,CSS, CSS3, JavaScript, API and JSON.">
-    <meta name="keywords" content="HTML5,CSS, CSS3, JavaScript, API, JSON, Bootstrap">
-    <meta name="author" content="Krittiya Clark">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto" rel="stylesheet">
+  <meta name="description" content="Chingu Voyage Build-to-learn project build Momentum dash. Chrome extension use Bootstrap, HTML5,CSS, CSS3, JavaScript, API and JSON.">
+  <meta name="keywords" content="HTML5,CSS, CSS3, JavaScript, API, JSON, Bootstrap">
+  <meta name="author" content="Krittiya Clark">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto" rel="stylesheet">
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/styles/main.css" rel="stylesheet" type="text/css">
-    <!--[if lt IE 9]>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/styles/main.css" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]>
       <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
@@ -21,199 +21,236 @@
 <body>
 
 
-<main>
+  <main>
 
-  <!--=================== Top ===================-->
-  
+    <!--=================== Top ===================-->
+
     <section id="top">
-      
-    <!--========== List & Weather =========-->
-      
+
+      <!--========== List & Weather =========-->
+
       <div class="container-fluid">
-          <div class="row cornerPadTop">
+        <div class="row cornerPadTop">
 
-              <!--========== List =========-->
-              <div class="col-md-10">
-                  <span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="false">list</span>
-                  <ul class="dropdown-menu">
-                      <li class="dropdown-header">Header</li>
-                      <li><a href="#">1</a></li>
-                      <li><a href="#">2</a></li>
-                      <li><a href="#">3</a></li>
-                      <li role="separator" class="divider"></li>
-                      <li><a href="#">Other</a></li>
-                  </ul>
-              </div><!-- .col-md-10 -->
+          <!--========== List =========-->
+          <div class="col-md-10">
+            <span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">list</span>
+            <ul class="dropdown-menu">
+              <li class="dropdown-header">Header</li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Other</a></li>
+            </ul>
+          </div>
+          <!-- .col-md-10 -->
 
-              <!--========== Weather =========-->
-              <div class="col-md-2 text-right cityClass">weather</div>
+          <!--========== Weather =========-->
+          <div class="col-md-2 text-right cityClass">weather</div>
 
-          </div><!--.row-->
-      </div><!--.container-->
-  </section><!-- #top -->
+        </div>
+        <!--.row-->
+      </div>
+      <!--.container-->
+    </section>
+    <!-- #top -->
 
-  <!--=================== Center ===================-->
+    <!--=================== Center ===================-->
 
-  <section id="main-box">
-     <div class="container">
-       <div class="row">
-         <div id="center">
-          <div class="col-md-6 col-md-offset-3 text-center">
+    <section id="main-box">
+      <div class="container">
+        <div class="row">
+          <div id="center">
+            <div class="col-md-6 col-md-offset-3 text-center">
 
-            <!--========== Clock =========-->
+              <!--========== Clock =========-->
 
-               <div class="center-clock">
-                 <div class="clock">
-                   <h1 id="time">
-                     9.99
-                   </h1>
-                   <span class="format">
+              <div class="center-clock">
+                <div class="clock">
+                  <h1 id="time">
+                    9.99
+                  </h1>
+                  <span class="format">
                      AM
                    </span>
-                 </div><!-- .clock -->
-               </div><!-- .center-clock -->
+                </div>
+                <!-- .clock -->
+              </div>
+              <!-- .center-clock -->
 
-                <!--========== Greeting =========-->
+              <!--========== Greeting =========-->
 
-                <div id="greeting">
-                  <h2>
-                    Good
-                      <span class="period">
+              <div id="greeting">
+                <h2>
+                  Good
+                  <span class="period">
                       morning,
                       </span>
-                      <span class="name">
+                  <span class="name">
                       Pai
                       </span>
-                  </h2>
-                </div><!-- #greeting -->
+                </h2>
+              </div>
+              <!-- #greeting -->
 
-          </div><!-- #center -->
+            </div>
+            <!-- #center -->
 
 
-           <!--========== Center Below =========-->
+            <!--========== Center Below =========-->
 
-           <div id="center-below">
+            <div id="center-below">
               <div id="focuses" class="col-md-6 col-md-offset-3 text-center">
 
                 <!--========== Focuse Text =========-->
 
-                 <div class="focuses-text">
-                    <h3>
-                      What is your main focus for today?
-                    </h3>
-                    <input type="text" />
+                <div class="focuses-text">
+                  <h3>
+                    What is your main focus for today?
+                  </h3>
+                  <input type="text" />
 
-                 </div><!-- .focuses-text -->
+                </div>
+                <!-- .focuses-text -->
 
-              </div><!-- #focuses -->
-            </div><!-- .col-md-6 .col-md-offset-3 -->
-          </div> <!-- #center-below -->
-         </div><!-- .row -->
-       </div><!-- .container -->
-     </section><!-- #main-box -->
+              </div>
+              <!-- #focuses -->
+            </div>
+            <!-- .col-md-6 .col-md-offset-3 -->
+          </div>
+          <!-- #center-below -->
+        </div>
+        <!-- .row -->
+      </div>
+      <!-- .container -->
+    </section>
+    <!-- #main-box -->
 
 
 
-  <!--=================== Footer ===================-->
+    <!--=================== Footer ===================-->
 
-  <section id="footer">
-    <div class="container-fluid">
-      <div class="row">
+    <section id="footer">
+      <div class="container-fluid">
+        <div class="row">
 
-         <!--========== Bottom Left =========-->
+          <!--========== Bottom Left =========-->
 
-         <div id="bottom-left" class="col-md-2">
+          <div id="bottom-left" class="col-md-2">
             <div id="preferences">
 
               <div class="dropup">
-                 <i class="fa fa-cog fa-2x dropdown-toggle" aria-hidden="true" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-cog fa-2x dropdown-toggle" aria-hidden="true" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
                  </i>
 
-                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                   <li><a href="#">Action</a></li>
-                   <li><a href="#">Another action</a></li>
-                   <li><a href="#">Something else here</a></li>
-                   <li role="separator" class="divider"></li>
-                   <li><a href="#">Separated link</a></li>
-                 </ul><!-- .dropdown-menu -->
-               </div><!-- .dropup -->
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+                <!-- .dropdown-menu -->
+              </div>
+              <!-- .dropup -->
 
-            </div><!-- #preferences -->
-         </div><!-- #bottom-left -->
+            </div>
+            <!-- #preferences -->
+          </div>
+          <!-- #bottom-left -->
 
-         <!--========== Bottom Center =========-->
-          
-         <div id="bottom-center" class="col-md-8">
-            
-          <!--========== Quote =========-->
+          <!--========== Bottom Center =========-->
 
-              <blockquote class="quote text-center">
-                <p id="quotation"></p>
-                <p id="author"></p>
+          <div id="bottom-center" class="col-md-8">
 
-                <p class="tweet">
-                  <a href="#" id="share-quote">
+            <!--========== Quote =========-->
+
+            <blockquote class="quote text-center">
+              <p id="quotation"></p>
+              <p id="author"></p>
+
+              <p class="tweet">
+                <a href="#" id="share-quote">
                     <i class="fa fa-twitter fa-fw tweet-icon"></i>
                   </a>
-                </p>
-              </blockquote>
+              </p>
+            </blockquote>
 
 
-         </div> <!--#bottom-center -->
-          
-         <!--========== Bottom Right =========-->
+          </div>
+          <!--#bottom-center -->
 
-         <div id="bottom-right text-right" class="col-md-2">
+          <!--========== Bottom Right =========-->
+
+          <div id="bottom-right" class="col-md-2">
 
             <!--========== Todo =========-->
 
             <div id="todo">
               <div class="todo-container">
 
-                <div class="dropup">
-                   <span class="dropdown-toggle" aria-hidden="true" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Todo
-                   </span>
+                <div class="todo-pane">
 
-                    <div id="dropup-custom" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
-                      <header id="dropdown-menu-todo">
-                        <input type="text" placeholder="Enter your todo" id="item" />
-                        <button id="add">
+
+
+                  <header id="todo-new">
+                    <input type="text" placeholder="Enter your todo" id="item" />
+                    <button id="add">
                           <i class="fa fa-plus" aria-hidden="true"></i>
                         </button>
-                      </header><!-- .dropdown-menu -->
+                  </header>
+                  <!-- .dropdown-menu -->
 
-                      
-                        <div class="container-todo-list">
-                          
-                          <!-- Uncompleted tasks -->
-                          <ul class="todo" id="todoList"></ul>
 
-                          <!-- Completed tasks -->
-                          <ul class="todo" id="completed"></ul>
-                          
-                        </div><!-- .container-todo-list -->
-                    </div><!-- .dropdown-menu -->
-                      
-                 </div><!-- .dropup -->
+                  <div class="container-todo-list">
 
-              </div><!-- .todo-container -->
-            </div><!-- #todo -->
-         </div><!-- #bottom-right -->
+                    <!-- Uncompleted tasks -->
+                    <ul class="todo" id="todoList"></ul>
 
-      </div><!-- .row -->
-    </div><!-- .container -->
-  </section>
+                    <!-- Completed tasks -->
+                    <ul class="todo" id="completed"></ul>
 
-</main>
+                  </div>
+                  <!-- .container-todo-list -->
 
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- <script src="assets/javascript/main.js" type="text/javascript"></script>
- <script src="assets/javascript/quote.js" type="text/javascript"></script>
- <script src="assets/javascript/weather.js" type="text/javascript"></script>
- <script src="assets/javascript/todo.js" type="text/javascript"></script>
+                  <!-- .dropdown-menu -->
+
+
+
+
+                </div>
+                <!-- .dropup -->
+
+
+
+              </div>
+              <!-- .todo-container -->
+            </div>
+            <!-- #todo -->
+
+            <span class="toggle todo-toggle text-right">
+                      Todo
+                </span>
+          </div>
+          <!-- #bottom-right -->
+
+        </div>
+        <!-- .row -->
+      </div>
+      <!-- .container -->
+    </section>
+
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="assets/javascript/main.js" type="text/javascript"></script>
+  <script src="assets/javascript/quote.js" type="text/javascript"></script>
+  <script src="assets/javascript/weather.js" type="text/javascript"></script>
+  <script src="assets/javascript/todo.js" type="text/javascript"></script>
+  <script src="assets/javascript/toggle.js" type="text/javascript"></script>
 
 </body>
 
