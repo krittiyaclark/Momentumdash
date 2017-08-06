@@ -164,42 +164,52 @@
           
          <!--========== Bottom Right =========-->
 
-         <div id="bottom-right text-right" class="col-md-2">
+         <div id="bottom-right" class="col-md-2">
 
             <!--========== Todo =========-->
 
             <div id="todo">
               <div class="todo-container">
 
-                <div class="dropup">
-                   <span class="dropdown-toggle" aria-hidden="true" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Todo
-                   </span>
+                <div class="todo-pane">
 
-                    <div id="dropup-custom" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
-                      <header id="dropdown-menu-todo">
+
+                    
+                      <header id="todo-new">
                         <input type="text" placeholder="Enter your todo" id="item" />
                         <button id="add">
                           <i class="fa fa-plus" aria-hidden="true"></i>
                         </button>
-                      </header><!-- .dropdown-menu -->
+                      </header>
+                      <!-- .dropdown-menu -->
 
-                      
-                        <div class="container-todo-list">
-                          
-                          <!-- Uncompleted tasks -->
-                          <ul class="todo" id="todoList"></ul>
 
-                          <!-- Completed tasks -->
-                          <ul class="todo" id="completed"></ul>
-                          
-                        </div><!-- .container-todo-list -->
-                    </div><!-- .dropdown-menu -->
+                      <div class="container-todo-list">
+
+                        <!-- Uncompleted tasks -->
+                        <ul class="todo" id="todoList"></ul>
+
+                        <!-- Completed tasks -->
+                        <ul class="todo" id="completed"></ul>
+
+                      </div>
+                      <!-- .container-todo-list -->
+                    
+                    <!-- .dropdown-menu -->
+                    
+                   
+
                       
                  </div><!-- .dropup -->
 
+                
+
               </div><!-- .todo-container -->
             </div><!-- #todo -->
+
+            <span class="toggle todo-toggle text-right">
+                      Todo
+                </span>
          </div><!-- #bottom-right -->
 
       </div><!-- .row -->
@@ -214,6 +224,7 @@
  <script src="assets/javascript/quote.js" type="text/javascript"></script>
  <script src="assets/javascript/weather.js" type="text/javascript"></script>
  <script src="assets/javascript/todo.js" type="text/javascript"></script>
+ <script src="assets/javascript/toggle.js" type="text/javascript"></script>
 
 </body>
 

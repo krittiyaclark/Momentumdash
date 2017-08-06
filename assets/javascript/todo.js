@@ -19,6 +19,14 @@ document.getElementById('add').addEventListener('click', function() {
     }
 });
 
+// function removeItem() {
+
+// }
+
+// function completeItem() {
+
+// }
+
 function addItem(text) {
     console.log(item);
 
@@ -34,9 +42,15 @@ function addItem(text) {
     remove.classList.add('remove');
     remove.innerHTML = removeIcon;
 
+    // Remove the item
+    //remove.addEventListener('click', removeItem);
+
     var complete = document.createElement('buttons');
     complete.classList.add('completed');
     complete.innerHTML = completedIcon;
+
+    // Completed the item
+    //complete.addEventListener('click', completeItem);
 
     // Buttons click for remove and complate task
     buttons.appendChild(remove);
