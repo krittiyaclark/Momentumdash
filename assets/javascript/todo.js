@@ -7,24 +7,17 @@ var data = {
 var removeIcon = '<i class="fa fa-lg fa-trash-o" aria-hidden="true"></i>';
 var completedIcon = '<i class="fa fa-lg fa-check-circle-o" aria-hidden="true"></i>';
 
-// User clicked on the button
-// If there is any text in the item field, add text to the todo list
-document.getElementById('add').addEventListener('click', function() {
-    var value = document.getElementById('item').value;
-    if (value) {
+document.getElementById('item').addEventListener('keydown', function (e) {
+    var inputValue = document.getElementById('item').value;
+    var value = this.value;
+    if (e.code === 'Enter' && value) {
         addItem(value);
 
         // Clear input field 
         document.getElementById('item').value = '';
     }
-    // function scroll() {
-    //     $('.container-todo-list ul li:first').slideUp(function() {
-    //         $(this).show().parent().append(this);
-            
-    //     }); // end slideUp
-    // } // end scroll
-
 }); // end addEventListener
+
 
 function addItem(text) {
     console.log(item);

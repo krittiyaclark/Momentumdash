@@ -121,40 +121,13 @@
       background: rgba(255, 255, 255, 0.2);
       border: 0;
       outline: none;
-      @include border-radius(5px 25px 25px 5px);
+      @include border-radius(5px 5px 5px 5px);
       @include box-shadow(none);
 
       -webkit-appearance: none;
       -moz-appearance: none;
       @include placeholder();
     }
-
-    #add {
-      width: 35px;
-      height: 35px;
-
-      position: absolute;
-      top: 147px;
-      right: 15px;
-      display: block;
-      z-index: 2;
-
-      background: $color-white;
-      border: 0px;
-      @include border-radius(25px);
-      @include box-shadow(none);
-      outline: none;
-      cursor: pointer;
-
-      -webkit-appearance: none;
-      -moz-appearance: none;
-    }
-      i {
-        color: $color-grey;
-        width: 16px;
-        height: 16px;
-      }
-
 }
 
 .toggle {
@@ -292,6 +265,7 @@
                 &:empty:after {
                     content: 'You have nothing to-do!';
                     margin: 15px 0 0 0;
+                    text-align: center;
                   }
 
                  &#completed:empty:after {
