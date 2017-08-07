@@ -13,11 +13,18 @@ document.getElementById('add').addEventListener('click', function() {
     var value = document.getElementById('item').value;
     if (value) {
         addItem(value);
-        
+
         // Clear input field 
         document.getElementById('item').value = '';
     }
-});
+    // function scroll() {
+    //     $('.container-todo-list ul li:first').slideUp(function() {
+    //         $(this).show().parent().append(this);
+            
+    //     }); // end slideUp
+    // } // end scroll
+
+}); // end addEventListener
 
 function addItem(text) {
     console.log(item);
@@ -45,4 +52,4 @@ function addItem(text) {
 
     // Insert new item to the top list
     list.insertBefore(item, list.childNodes[0]);
-}
+} // end addItem

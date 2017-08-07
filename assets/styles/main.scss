@@ -94,7 +94,7 @@
 
 .todo-container {
   position: relative;
-  display: flex;
+  display: inline-block;
 }
 .todo-pane {
   background: $color-drak-grey;
@@ -102,9 +102,10 @@
   text-align: left;
   display: none;
   bottom: 50px;
-  position: relative;
+  position: absolute;
   padding: 15px;
   z-index: 9999;
+  left: -300px;
   @include border-radius(5px);
      input {
       height: 36px;
@@ -132,10 +133,11 @@
       width: 35px;
       height: 35px;
 
-      position:absolute;
-      top:15px;
-      right:15px;
-      z-index:2;
+      position: absolute;
+      top: 147px;
+      right: 15px;
+      display: block;
+      z-index: 2;
 
       background: $color-white;
       border: 0px;
@@ -160,6 +162,7 @@
   top: 0;
   padding-right: 15px;
   right: 0;
+  cursor: pointer;
 }
 
 .container-todo-list {
@@ -173,17 +176,17 @@
       li {
         width: 100%;
         float: left;
-        min-height: 50px;
+        min-height: 30px;
         font-size: $font-size;
         font-weight: $color-white;
         color: $color-grey;
-        line-height: 21px;
+        line-height: 30px;
         list-style: none;
 
         background: $color-drak-grey;
         position: relative;
         margin: 0 0 10px 0;
-        padding: 14px 100px 14px 14px;
+        padding: 0 100px 0 7px;
         word-break: break-word;
         @include border-radius(5px);
         @include box-shadow(none);
@@ -200,16 +203,16 @@
               }
                     .buttons {
                         width: 100px;
-                        height: 50px;
+                        height: 7px;
 
                         position: absolute;
                         top: 0;
                         right: 0;
-                        line-height: 50px;
+                        line-height: 30px;
 
                         button {
                             width: 50px;
-                            height: 50px;
+                            height: 7px;
                             float: left;
                             background: none;
                             position: relative;
@@ -230,6 +233,16 @@
                               left: 0;
 
                               margin: -11px 0 0 -11px;
+
+                              //  &:hover .remove {
+                              //     cursor: pointer;
+                              //   }
+
+                              //  &:hover .complete {
+                              //     background: rgba(37, 185, 154, 0.7);
+                              //     cursor: pointer;
+                              //     color: #000;
+                              //   }
                             }
 
                             &.complete i {
@@ -237,18 +250,7 @@
                                 border: 1.5px solid #25b99a;
 
                                 transition: background 0.2s ease;
-
-                                &.complete:hover i {
-                                    background: rgba(37, 185, 154, 0.7);
-                                    cursor: pointer;
-                                    color: #000;
-                                  }
-
                                 }
-
-                                &.remove:hover i {
-                                  cursor: pointer;
-                                } 
 
                           }
                           
@@ -257,9 +259,15 @@
                               float: right;
                             }
 
-                            // Not working
                             .completed i, .remove i {
                               cursor: pointer;
+                            }
+
+                              .completed i:hover {
+                                color: $color-green;
+                              }
+                              .remove i:hover {
+                                color: $color-red;
                             }
                       }          
                 } 
@@ -286,7 +294,7 @@
                     margin: 15px 0 0 0;
                   }
 
-                 & #completed:empty:after {
+                 &#completed:empty:after {
                     content: 'You have yet to complete any tasks.';
                   }
 

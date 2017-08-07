@@ -472,10 +472,7 @@ body {
 
 .todo-container {
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
+  display: inline-block; }
 
 .todo-pane {
   background: #384047;
@@ -483,9 +480,10 @@ body {
   text-align: left;
   display: none;
   bottom: 50px;
-  position: relative;
+  position: absolute;
   padding: 15px;
   z-index: 9999;
+  left: -300px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -520,8 +518,9 @@ body {
     width: 35px;
     height: 35px;
     position: absolute;
-    top: 15px;
+    top: 147px;
     right: 15px;
+    display: block;
     z-index: 2;
     background: #fff;
     border: 0px;
@@ -545,7 +544,8 @@ body {
   position: absolute;
   top: 0;
   padding-right: 15px;
-  right: 0; }
+  right: 0;
+  cursor: pointer; }
 
 .container-todo-list {
   width: 100%;
@@ -556,16 +556,16 @@ body {
     .container-todo-list ul.todo li {
       width: 100%;
       float: left;
-      min-height: 50px;
+      min-height: 30px;
       font-size: 15px;
       font-weight: #fff;
       color: #7b8b8e;
-      line-height: 21px;
+      line-height: 30px;
       list-style: none;
       background: #384047;
       position: relative;
       margin: 0 0 10px 0;
-      padding: 14px 100px 14px 14px;
+      padding: 0 100px 0 7px;
       word-break: break-word;
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
@@ -582,14 +582,14 @@ body {
         margin: 0; }
       .container-todo-list ul.todo li .buttons {
         width: 100px;
-        height: 50px;
+        height: 7px;
         position: absolute;
         top: 0;
         right: 0;
-        line-height: 50px; }
+        line-height: 30px; }
         .container-todo-list ul.todo li .buttons button {
           width: 50px;
-          height: 50px;
+          height: 7px;
           float: left;
           background: none;
           position: relative;
@@ -616,17 +616,15 @@ body {
             -webkit-transition: background 0.2s ease;
             -o-transition: background 0.2s ease;
             transition: background 0.2s ease; }
-            .container-todo-list ul.todo li .buttons button.complete i.complete:hover i {
-              background: rgba(37, 185, 154, 0.7);
-              cursor: pointer;
-              color: #000; }
-          .container-todo-list ul.todo li .buttons button.remove:hover i {
-            cursor: pointer; }
         .container-todo-list ul.todo li .buttons .completed, .container-todo-list ul.todo li .buttons .remove {
           padding: 0 5px 0;
           float: right; }
         .container-todo-list ul.todo li .buttons .completed i, .container-todo-list ul.todo li .buttons .remove i {
           cursor: pointer; }
+        .container-todo-list ul.todo li .buttons .completed i:hover {
+          color: #25b99a; }
+        .container-todo-list ul.todo li .buttons .remove i:hover {
+          color: #ff0000; }
     .container-todo-list ul.todo#completed {
       position: relative;
       padding: 60px 0 0 0; }
@@ -642,7 +640,7 @@ body {
     .container-todo-list ul.todo:empty:after {
       content: 'You have nothing to-do!';
       margin: 15px 0 0 0; }
-    .container-todo-list ul.todo #completed:empty:after {
+    .container-todo-list ul.todo#completed:empty:after {
       content: 'You have yet to complete any tasks.'; }
     .container-todo-list ul.todo#todo:after, .container-todo-list ul.todo#completed:after {
       width: 100%;
