@@ -32,12 +32,13 @@ window.onload = function () {
         }
 
         function completeItem() {
+            
             var item = this.parentNode.parentNode;
             var parent = item.parentNode;
             var id = parent.id;
             var target;
 
-            if (id === 'todo') {
+            if (id === 'todoList') {
               // Completed item
                 target = document.getElementById('completed');
             } else {
@@ -45,6 +46,8 @@ window.onload = function () {
                 target = document.getElementById('todoList');
             }
 
+            console.log(document.getElementById('completed'));
+            
             parent.removeChild(item);
             target.insertBefore(item, target.childNodes[0]);
         }

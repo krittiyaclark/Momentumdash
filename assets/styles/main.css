@@ -630,7 +630,7 @@ body {
     .container-todo-list ul.todo#completed {
       position: relative;
       padding: 30px 0 0 0; }
-      .container-todo-list ul.todo#completed:before {
+      .container-todo-list ul.todo#completed::before {
         content: '';
         width: 150px;
         height: 1px;

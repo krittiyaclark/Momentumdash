@@ -273,7 +273,7 @@
   &#completed {
     position: relative;
     padding: 30px 0 0 0;
-    &:before {
+    &::before {
       content: '';
       width: 150px;
       height: 1px;
