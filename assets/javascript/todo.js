@@ -23,11 +23,30 @@ window.onload = function () {
             }
         }); // end addEventListener
 
+        function removeItem() {
+            console.log(this.parentNode.parentNode);
+            var item = this.parentNode.parentNode;
+            var parent = item.parentNode;
 
-        function removeItem(e) {
-            console.log(this);
-            // var item = this.parentNode.parentNode;
-            // var parent = item.parentNode;
+            parent.removeChild(item);
+        }
+
+        function completeItem() {
+            var item = this.parentNode.parentNode;
+            var parent = item.parentNode;
+            var id = parent.id;
+            var target;
+
+            if (id === 'todo') {
+              // Completed item
+                target = document.getElementById('completed');
+            } else {
+              // Todo item
+                target = document.getElementById('todoList');
+            }
+
+            parent.removeChild(item);
+            target.insertBefore(item, target.childNodes[0]);
         }
 
         function addItem(text) {
@@ -51,6 +70,9 @@ window.onload = function () {
             var complete = document.createElement('buttons');
             complete.classList.add('completed');
             complete.innerHTML = completedIcon;
+
+            // Complated item
+            complete.addEventListener('click', completeItem);
 
             // Buttons click for remove and complate task
             buttons.appendChild(remove);

@@ -241,7 +241,34 @@
 
       &:not(#completed) li .buttons button.complete:hover i {
         background: rgba(37, 185, 154, 0.75);
+        .fill {
+          fill: #fff;
+        }
       }
+
+  &#completed li .buttons button.complete i .fill {
+    fill: #fff;
+  }
+
+  li .buttons button {
+    i .fill {
+      transition: fill 0.2s ease;
+    }
+
+    &.remove {
+      i .fill {
+        fill: #c0cecb;
+      }
+
+      &:hover i .fill {
+        fill: #e85656;
+      }
+    }
+    
+    &.complete i .fill {
+      fill: #25b99a;
+    }
+  }
 
   &#completed {
     position: relative;

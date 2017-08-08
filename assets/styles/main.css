@@ -613,6 +613,20 @@ body {
       border: 0px; }
     .container-todo-list ul.todo:not(#completed) li .buttons button.complete:hover i {
       background: rgba(37, 185, 154, 0.75); }
+      .container-todo-list ul.todo:not(#completed) li .buttons button.complete:hover i .fill {
+        fill: #fff; }
+    .container-todo-list ul.todo#completed li .buttons button.complete i .fill {
+      fill: #fff; }
+    .container-todo-list ul.todo li .buttons button i .fill {
+      -webkit-transition: fill 0.2s ease;
+      -o-transition: fill 0.2s ease;
+      transition: fill 0.2s ease; }
+    .container-todo-list ul.todo li .buttons button.remove i .fill {
+      fill: #c0cecb; }
+    .container-todo-list ul.todo li .buttons button.remove:hover i .fill {
+      fill: #e85656; }
+    .container-todo-list ul.todo li .buttons button.complete i .fill {
+      fill: #25b99a; }
     .container-todo-list ul.todo#completed {
       position: relative;
       padding: 30px 0 0 0; }
