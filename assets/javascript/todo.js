@@ -1,48 +1,63 @@
-// Add an object to store data
-var data = {
-    todo: [],
-    completed: []
-};
+window.onload = function () {
 
-var removeIcon = '<i class="fa fa-lg fa-trash-o" aria-hidden="true"></i>';
-var completedIcon = '<i class="fa fa-lg fa-check-circle-o" aria-hidden="true"></i>';
+        // Add an object to store data
+        var data = {
+            todo: [],
+            completed: []
+        };
 
-document.getElementById('item').addEventListener('keydown', function (e) {
-    var inputValue = document.getElementById('item').value;
-    var value = this.value;
-    if (e.code === 'Enter' && value) {
-        addItem(value);
+        var removeIcon = '<i class="fa fa-lg fa-trash-o" aria-hidden="true"></i>';
+        var completedIcon = '<i class="fa fa-lg fa-check-circle-o" aria-hidden="true"></i>';
 
-        // Clear input field 
-        document.getElementById('item').value = '';
-    }
-}); // end addEventListener
+        var value = document.getElementById('item').value;
+
+        // Add item when click enter
+        document.getElementById('item').addEventListener('keydown', function (e) {
+            
+            var value = this.value;
+            if (e.keyCode === 13 && value) {
+                addItem(value);
+
+                // Clear input field 
+                document.getElementById('item').value = '';
+            }
+        }); // end addEventListener
 
 
-function addItem(text) {
-    console.log(item);
+        function removeItem(e) {
+            console.log(this);
+            // var item = this.parentNode.parentNode;
+            // var parent = item.parentNode;
+        }
 
-    var list = document.getElementById('todoList');
+        function addItem(text) {
+            console.log(item);
 
-    var item = document.createElement('li');
-    item.innerHTML = text;
+            var list = document.getElementById('todoList');
 
-    var buttons = document.createElement('div');
-    buttons.classList.add('buttons');
+            var item = document.createElement('li');
+            item.innerHTML = text;
 
-    var remove = document.createElement('buttons');
-    remove.classList.add('remove');
-    remove.innerHTML = removeIcon;
+            var buttons = document.createElement('div');
+            buttons.classList.add('buttons');
 
-    var complete = document.createElement('buttons');
-    complete.classList.add('completed');
-    complete.innerHTML = completedIcon;
+            var remove = document.createElement('buttons');
+            remove.classList.add('remove');
+            remove.innerHTML = removeIcon;
 
-    // Buttons click for remove and complate task
-    buttons.appendChild(remove);
-    buttons.appendChild(complete);
-    item.appendChild(buttons);
+            // Remove item
+            remove.addEventListener('click', removeItem);
 
-    // Insert new item to the top list
-    list.insertBefore(item, list.childNodes[0]);
-} // end addItem
+            var complete = document.createElement('buttons');
+            complete.classList.add('completed');
+            complete.innerHTML = completedIcon;
+
+            // Buttons click for remove and complate task
+            buttons.appendChild(remove);
+            buttons.appendChild(complete);
+            item.appendChild(buttons);
+
+            // Insert new item to the top list
+            list.insertBefore(item, list.childNodes[0]);
+        } // end addItem
+} // window.onload
