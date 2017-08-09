@@ -1,7 +1,7 @@
 window.onload = function () {
 
         // Add an object to store data
-        var data = {
+        var data = (localStorage.getItem('todoList')) ? JSON.parse(localStorage.getItem('todoList')) :{
             todo: [],
             completed: []
         };
@@ -9,6 +9,8 @@ window.onload = function () {
         var removeIcon = '<i class="fa fa-lg fa-trash-o" aria-hidden="true"></i>';
         var completedIcon = '<i class="fa fa-lg fa-check-circle-o" aria-hidden="true"></i>';
 
+        render();
+        
         var value = document.getElementById('item').value;
 
         // Add item when click enter
@@ -23,12 +25,46 @@ window.onload = function () {
             }
         }); // end addEventListener
 
+
+        // Save data to local storage
+        function updated() {
+            localStorage.setItem('todoList', JSON.stringify(data));
+        }
+
+        // Get data from local storage
+        function render() {
+            if (!data.todo.length && !data.completed.length) return;
+
+            for (var i = 0; i < data.todo.length; i++) {
+                var value = data.todo[i];
+                addItem(value);
+            }
+
+            for (var j = 0; j < data.completed.length; j++) {
+                var value = data.completed[j];
+                addItem(value, true);
+            }        
+        }
+
+        // render();
+
         function removeItem() {
             console.log(this.parentNode.parentNode);
             var item = this.parentNode.parentNode;
             var parent = item.parentNode;
+            var id = parent.id;
+            var value = item.innerText;
+
+            if (id === 'todoList') {
+                data.todo.splice(data.todo.indexOf(value), 1);
+            } else {
+                data.completed.splice(data.todo.indexOf(value), 1);
+             }
+
+            console.log(data);
 
             parent.removeChild(item);
+            updated();
         }
 
         function completeItem() {
@@ -36,7 +72,19 @@ window.onload = function () {
             var item = this.parentNode.parentNode;
             var parent = item.parentNode;
             var id = parent.id;
+            var value = item.innerText;
             var target;
+
+            if (id === 'todoList') {
+                data.todo.splice(data.todo.indexOf(value), 1);
+                data.completed.push(value);
+            } else {
+                data.completed.splice(data.todo.indexOf(value), 1);
+                data.todo.push(value);
+            }
+            
+
+            console.log(data);
 
             if (id === 'todoList') {
               // Completed item
@@ -50,12 +98,15 @@ window.onload = function () {
             
             parent.removeChild(item);
             target.insertBefore(item, target.childNodes[0]);
+
+            data.todo.push(value);
+            updated();
         }
 
-        function addItem(text) {
+        function addItem(text, completed) {
             console.log(item);
 
-            var list = document.getElementById('todoList');
+            var list = (completed) ? document.getElementById('completed'):document.getElementById('todoList');
 
             var item = document.createElement('li');
             item.innerHTML = text;
@@ -84,5 +135,6 @@ window.onload = function () {
 
             // Insert new item to the top list
             list.insertBefore(item, list.childNodes[0]);
+            
         } // end addItem
 } // window.onload
