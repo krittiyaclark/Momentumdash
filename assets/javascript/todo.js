@@ -22,16 +22,13 @@ window.onload = function () {
 
                 // Clear input field 
                 document.getElementById('item').value = '';
+
+                data.todo.push(value);
+                updated();
             }
         }); // end addEventListener
 
-
-        // Save data to local storage
-        function updated() {
-            localStorage.setItem('todoList', JSON.stringify(data));
-        }
-
-        // Get data from local storage
+        // Render from local storage
         function render() {
             if (!data.todo.length && !data.completed.length) return;
 
@@ -43,10 +40,13 @@ window.onload = function () {
             for (var j = 0; j < data.completed.length; j++) {
                 var value = data.completed[j];
                 addItem(value, true);
-            }        
+            }
         }
 
-        // render();
+        // Updated data to local storage
+        function updated() {
+            localStorage.setItem('todoList', JSON.stringify(data));
+        }
 
         function removeItem() {
             console.log(this.parentNode.parentNode);
@@ -59,12 +59,13 @@ window.onload = function () {
                 data.todo.splice(data.todo.indexOf(value), 1);
             } else {
                 data.completed.splice(data.todo.indexOf(value), 1);
-             }
+            }
+            
+            updated();
 
             console.log(data);
 
             parent.removeChild(item);
-            updated();
         }
 
         function completeItem() {
@@ -83,6 +84,7 @@ window.onload = function () {
                 data.todo.push(value);
             }
             
+            updated();
 
             console.log(data);
 
@@ -99,8 +101,8 @@ window.onload = function () {
             parent.removeChild(item);
             target.insertBefore(item, target.childNodes[0]);
 
-            data.todo.push(value);
-            updated();
+            //data.todo.push(value);
+            
         }
 
         function addItem(text, completed) {

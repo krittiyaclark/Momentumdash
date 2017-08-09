@@ -141,7 +141,10 @@
 .container-todo-list {
   width: 100%;
   float: left;
-  padding: 15px;
+  //padding: 15px;
+  
+  height: 350px;
+  overflow: scroll;
 
    ul.todo {
       width: 100%;
