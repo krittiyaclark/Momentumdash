@@ -1,21 +1,55 @@
 $(document).ready(function() {
 
-    $(function callTime() {
+    function callTime() {
 
         var date = new Date();
-        //time = date.toLocaleTimeString();
-        var hour = date.getHours() +12;
-        var min = date.getMinutes();
         
-        // min = (min 12) ? hour - 12 : hour;
-        // hour = (hour == 0) ? 12 : hour;
+        var hour = date.getHours();
+        var min = date.getMinutes();
 
-        // var currentTime = hour + ':' + min + '' + timeOfDay;
+        if ( hour > 12 ) {
+           hour = hour - 12;
+        } 
 
-        time = date.toLocaleTimeString();
+        if ( min < 10 ) {
+            min = '0' + min;
+        }
+        var time = hour + ':' + min;
+        
         $('#time').html(time);
-        console.log(hour);
+        
+
+        //hour = 8;
+        if ( date.getHours() < 12 ) {
+            $('.period').html('morning,');
+        } else {
+            $('.period').html('evening,');
+        }
+    };
+
+    function load() {
+        var name = localStorage.getItem('greetingName');
+
+        if (name) {
+            $('.name').html(name);
+            callTime();
+            setInterval(callTime, 1000);
+            $('.clock').show();
+            $('#greeting').show();
+            $('#greeting-form').hide();
+        } else {
+            $('.clock').hide();
+            $('#greeting').hide();
+            $('#greeting-form').show();
+        }
+    }
+
+    $('#submit-button').on('click', function () {
+        var newName = $('#greeting-form').val();
+        localStorage.setItem('greetingName', newName);
+        // use `localStorage.clear()` to reset the name 
+        load();
     });
 
-    setInterval(1000);
+    load();
 });
