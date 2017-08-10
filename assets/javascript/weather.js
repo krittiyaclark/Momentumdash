@@ -58,14 +58,21 @@ window.onload = function() {
                     if (this.checked) {
                         document.getElementById("tempId").innerHTML = tempC;
                     } else document.getElementById("tempId").innerHTML = tempF;
-                });
+                })
 
                 $('.settings-dropup').click(function(e) {
                     e.stopPropagation();
-                });     
+                })     
 
-            });        
-        });    
-    }
+            }) // .getJSON        
+        }) // .getCurrentPosition
+    } // if (navigator.geolocation)
+
+    /* Show/Hide Weather */
+    $('#weather-checkbox').change(function(){
+        if(this.checked) {
+            $('.col-sm-2').hide();
+        } else $('.col-sm-2').show();
+    })
      
-} 
+} // window.onload

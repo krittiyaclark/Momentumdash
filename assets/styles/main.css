@@ -396,7 +396,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: none;
+  overflow: hidden;
   min-height: 100vh;
   color: #fff;
   /*right: 0;
@@ -468,7 +468,8 @@ body {
   color: #7b8b8e; }
 
 .cornerPadTop {
-  padding-top: 20px; }
+  padding-top: 20px;
+  height: 70px; }
 
 #dropdown-menu-todo {
   width: 300px;
@@ -603,7 +604,7 @@ body {
 
 /* WEATHER */
 .item {
-  margin-left: 10px; }
+  padding-left: 10px; }
 
 #weatherIcon {
   max-width: 25px;
@@ -626,11 +627,10 @@ body {
   display: inline-block;
   width: 30px;
   height: 17px;
-  position: relative; }
-
-/* Hide default HTML checkbox (label > input) */
-.switch input {
-  display: none; }
+  position: relative;
+  /* Hide default HTML checkbox (label > input) */ }
+  .switch input {
+    display: none; }
 
 /* The slider */
 .slider {
@@ -644,18 +644,17 @@ body {
   -webkit-transition: .4s;
   -o-transition: .4s;
   transition: .4s; }
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 13px;
-  width: 13px;
-  left: 2px;
-  bottom: 2px;
-  background-color: white;
-  -webkit-transition: .4s;
-  -o-transition: .4s;
-  transition: .4s; }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s; }
 
 input:checked + .slider {
   background-color: #2196F3; }
@@ -672,9 +671,8 @@ input:checked + .slider:before {
 /* Rounded sliders */
 .slider.round {
   border-radius: 17px; }
-
-.slider.round:before {
-  border-radius: 50%; }
+  .slider.round:before {
+    border-radius: 50%; }
 
 /* SETTINGS DROPUP MENU */
 .settings-dropup {
@@ -693,3 +691,6 @@ input:checked + .slider:before {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
+
+* {
+  outline: 1px solid red; }

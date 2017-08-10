@@ -83,6 +83,7 @@
 
 .cornerPadTop {
     padding-top: 20px;
+    height: 70px;
 }
 
 #dropdown-menu-todo {
@@ -199,7 +200,7 @@
 /* WEATHER */
 
 .item {
-  margin-left: 10px;
+  padding-left: 10px;
 }
 
 #weatherIcon {
@@ -229,10 +230,9 @@
   width: 30px;
   height: 17px;
   position: relative;
+  /* Hide default HTML checkbox (label > input) */
+  input {display:none;}
 }
-
-/* Hide default HTML checkbox (label > input) */
-.switch input {display:none;}
 
 /* The slider */
 .slider { 
@@ -245,18 +245,18 @@
   background-color: #ccc;
   -webkit-transition: .4s;
   transition: .4s;
-}
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 13px;
-  width: 13px;
-  left: 2px;
-  bottom: 2px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  &:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
 }
 
 input:checked + .slider {
@@ -276,19 +276,24 @@ input:checked + .slider:before {
 /* Rounded sliders */
 .slider.round {
   border-radius: 17px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
+  &:before {
+    border-radius: 50%;
+  }
 }
 
 /* SETTINGS DROPUP MENU */
 
 .settings-dropup {
   width: 300px;
+  // li a {
+    // color: $color-white; (delete and style in .dropdown-menu)
+  // }
 }
 .settings-flex-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+  * {
+   outline: 1px solid red;
+  }
