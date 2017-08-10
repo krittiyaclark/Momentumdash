@@ -1,8 +1,8 @@
 window.onload = function() {
 
-    var latitude;
-    var longitude;
-    var url;
+    var tempD;
+    var tempC;
+    var tempF;
 
     if (navigator.geolocation) {
     
@@ -13,13 +13,15 @@ window.onload = function() {
     
             $.getJSON(url, function(data) {
                 var city = data.name;
-                var tempC = Math.round(data.main.temp);
-                var tempF = Math.round(tempC * 1.8 + 32);
+                tempD = data.main.temp;
+                tempC = Math.round(tempD) + "&#176;";
+                tempF = Math.round(tempD * 1.8 + 32) + "&#176;";
                 var mainDescrip = data.weather[0].main;
 
                 document.getElementById("cityId").innerHTML = city;
-                document.getElementById("tempId").innerHTML = tempF;
 
+                document.getElementById("tempId").innerHTML = tempF;   
+                               
                 switch (mainDescrip) {
                     case "Clear":
                     document.getElementById("weatherIcon").src = "https://res.cloudinary.com/t3unfxn28/image/upload/v1501813445/Momentum/simple_weather_icon_01.png";
@@ -50,9 +52,20 @@ window.onload = function() {
                     break;
                     default:
                     document.getElementById("weatherIcon").src = "https://res.cloudinary.com/t3unfxn28/image/upload/v1501813445/Momentum/simple_weather_icon_01.png";
-                    } 
+                } 
+            
+                $('#temp-checkbox').change(function() {
+                    if (this.checked) {
+                        document.getElementById("tempId").innerHTML = tempC;
+                    } else document.getElementById("tempId").innerHTML = tempF;
+                });
+
+                $('.settings-dropup').click(function(e) {
+                    e.stopPropagation();
+                });     
 
             });        
         });    
-    } 
+    }
+     
 } 
