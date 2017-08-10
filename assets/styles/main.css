@@ -409,8 +409,9 @@ body {
   width: 100%;
   text-align: center; }
   #center h1#time {
-    font-size: 1050%;
-    font-weight: bold; }
+    font-size: 1199%;
+    font-weight: bold;
+    margin-bottom: 0; }
   #center .format {
     position: absolute;
     left: 102%;
@@ -418,9 +419,34 @@ body {
     font-size: 150%;
     opacity: 0; }
   #center h2 {
-    font-size: 300%;
+    font-size: 337.5%;
     font-weight: bold;
-    line-height: 1; }
+    line-height: 1;
+    letter-spacing: 1px;
+    margin-bottom: 30px; }
+
+#center-box {
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px; }
+  #center-box h3 {
+    font-size: 187.5%;
+    font-weight: bold; }
+  #center-box input {
+    width: 450px;
+    border-bottom-width: 2px;
+    display: block;
+    font-size: 337.5%;
+    background: 0;
+    border: 0;
+    border-bottom: 3px solid #fff;
+    color: #fff;
+    font-weight: 500;
+    outline: 0;
+    margin: 0 auto; }
 
 #center-below {
   display: block;
@@ -430,10 +456,11 @@ body {
   text-align: center; }
   #center-below h3 {
     font-size: 187.5%;
-    font-weight: bold; }
+    font-weight: inherit; }
   #center-below input {
     width: 450px;
     border-bottom-width: 2px;
+    font-size: 120%;
     display: block;
     background: 0;
     border: 0;
@@ -525,7 +552,7 @@ body {
 .container-todo-list {
   width: 100%;
   float: left;
-  height: 350px;
+  max-height: 350px;
   overflow: scroll; }
   .container-todo-list ul.todo {
     width: 100%;

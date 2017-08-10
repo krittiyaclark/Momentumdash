@@ -25,7 +25,7 @@ $(document).ready(function() {
         } else {
             $('.period').html('evening,');
         }
-    };
+    }; // end callTime
 
     function load() {
         var name = localStorage.getItem('greetingName');
@@ -36,20 +36,26 @@ $(document).ready(function() {
             setInterval(callTime, 1000);
             $('.clock').show();
             $('#greeting').show();
-            $('#greeting-form').hide();
+            $('#center-box').hide();
         } else {
             $('.clock').hide();
             $('#greeting').hide();
-            $('#greeting-form').show();
+            $('#center-box').show();
         }
-    }
+    } // end load
 
-    $('#submit-button').on('click', function () {
-        var newName = $('#greeting-form').val();
-        localStorage.setItem('greetingName', newName);
-        // use `localStorage.clear()` to reset the name 
-        load();
-    });
+    $('#greeting-form').keypress(function (e) {
+        if (e.which == 13) {
+            e.preventDefault();
+            var newName = $('#greeting-form').val();
+            localStorage.setItem('greetingName', newName);
+            $('#greeting-form').submit();
+            // use `localStorage.clear()` to reset the name 
+            //localStorage.clear();
+            console.log(newName);
+            load();
+        }
+    }); 
 
     load();
-});
+}); // end document.ready
