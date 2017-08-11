@@ -396,7 +396,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
   min-height: 100vh;
   color: #fff;
   /*right: 0;
@@ -541,7 +540,7 @@ body {
       /* Firefox 19+ */ }
 
 .toggle {
-  position: absolute;
+  position: relative;
   top: 0;
   padding-right: 15px;
   right: 0;
@@ -705,6 +704,21 @@ body {
   letter-spacing: 1px;
   font-size: x-small; }
 
+.flex-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+
 .v-adjust {
   display: -webkit-box;
   display: -webkit-flex;
@@ -724,7 +738,7 @@ body {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
-  .v-adjust .col-md-8 {
+  .v-adjust .col-sm-8 {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -739,21 +753,6 @@ body {
   -ms-flex-pack: end;
   justify-content: flex-end;
   margin-bottom: 3%; }
-
-.flex-container {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end; }
 
 /* The switch - the box around the slider (label) */
 .switch {
@@ -823,6 +822,3 @@ input:checked + .slider:before {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
-
-* {
-  outline: 1px solid red; }

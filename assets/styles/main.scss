@@ -163,7 +163,7 @@
 }
 
 .toggle {
-  position: absolute;
+  position: relative;
   top: 0;
   padding-right: 15px;
   right: 0;
@@ -381,6 +381,13 @@
   font-size: x-small;
 }
 
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  // margin-bottom: 5px;
+}
+
 //######### Footer - Vertical Alignment #########// 
 
 .v-adjust {    
@@ -390,7 +397,7 @@
         display: flex;
         align-items: center;
   }
-  .col-md-8 {
+  .col-sm-8 {
         justify-content: center;
     }    
 }
@@ -402,13 +409,6 @@
 #bottom-right {
     justify-content: flex-end;
     margin-bottom: 3%;
-}
-
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  // margin-bottom: 5px;
 }
 
 //######### Settings Switch #########//
@@ -483,6 +483,4 @@ input:checked + .slider:before {
   justify-content: space-between;
   align-items: center;
 }
-  * {
-   outline: 1px solid red;
-  }
+

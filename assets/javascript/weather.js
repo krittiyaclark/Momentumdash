@@ -1,4 +1,4 @@
-window.onload = function() {
+$(document).ready(function() {
 
     var tempD;
     var tempC;
@@ -58,21 +58,22 @@ window.onload = function() {
                     if (this.checked) {
                         document.getElementById("tempId").innerHTML = tempC;
                     } else document.getElementById("tempId").innerHTML = tempF;
-                })
+                })    
 
-                $('.settings-dropup').click(function(e) {
-                    e.stopPropagation();
-                })     
-
-            }) // .getJSON        
-        }) // .getCurrentPosition
+            }); // .getJSON        
+        }); // .getCurrentPosition
     } // if (navigator.geolocation)
+
+    /* Prevent Click */
+    $('.settings-dropup').click(function(e) {
+        e.stopPropagation();
+    }); 
 
     /* Show/Hide Weather */
     $('#weather-checkbox').change(function(){
         if(this.checked) {
-            $('.col-sm-2').hide();
-        } else $('.col-sm-2').show();
-    })
+            $('.weather-box').hide();
+        } else $('.weather-box').show();
+    });
      
-} // window.onload
+}); // $(document).ready()
