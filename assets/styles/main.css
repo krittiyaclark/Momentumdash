@@ -396,6 +396,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
   min-height: 100vh;
   color: #fff;
   /*right: 0;
@@ -493,9 +494,6 @@ body {
 
 .tweet a:active, .tweet a:hover {
   color: #7b8b8e; }
-
-.cornerPadTop {
-  padding-top: 20px; }
 
 .todo-container {
   position: relative;
@@ -684,3 +682,147 @@ body {
     .container-todo-list ul.todo .remove i:hover {
       cursor: pointer;
       color: #ff0000; }
+
+.cornerPadTop {
+  padding-top: 20px;
+  height: 70px; }
+
+.item {
+  padding-left: 10px; }
+
+#weatherIcon {
+  max-width: 25px;
+  padding-top: 5px; }
+
+#tempId {
+  font-size: x-large; }
+
+.degree {
+  font-size: x-large; }
+
+#cityId {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: x-small; }
+
+.v-adjust {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+  .v-adjust [class^="col-"], .v-adjust [class*="col-"] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .v-adjust .col-md-8 {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+
+#bottom-left {
+  margin-bottom: 3%; }
+
+#bottom-right {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-bottom: 3%; }
+
+.flex-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+
+/* The switch - the box around the slider (label) */
+.switch {
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+  position: relative;
+  /* Hide default HTML checkbox (label > input) */ }
+  .switch input {
+    display: none; }
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s; }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s; }
+
+input:checked + .slider {
+  background-color: #2196F3; }
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #2196F3; }
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px); }
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 17px; }
+  .slider.round:before {
+    border-radius: 50%; }
+
+.settings-dropup {
+  width: 300px; }
+
+.settings-flex-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+* {
+  outline: 1px solid red; }

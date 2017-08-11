@@ -30,27 +30,35 @@
       <!--========== List & Weather =========-->
 
       <div class="container-fluid">
-        <div class="row cornerPadTop">
+          <div class="row cornerPadTop">
 
-          <!--========== List =========-->
-          <div class="col-md-10">
-            <span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">list</span>
-            <ul class="dropdown-menu">
-              <li class="dropdown-header">Header</li>
-              <li><a href="#">1</a></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Other</a></li>
-            </ul>
-          </div><!-- .col-md-10 -->
+              <!--========== List =========-->
+              <div class="col-sm-10">
+                  <span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">Links</span>
+                  <ul class="dropdown-menu">
+                      <li class="dropdown-header">Header</li>
+                      <li><a href="#">Pai</a></li>
+                      <li><a href="#">Eun</a></li>
+                      <li><a href="#">Unsplash</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Other</a></li>
+                  </ul>
+              </div><!-- .col-md-10 -->
 
-          <!--========== Weather =========-->
-          <div class="col-md-2 text-right cityClass">weather</div>
-
-        </div><!--.row-->
-      </div><!--.container-->
-    </section><!-- #top -->
+              <!--========== Weather =========-->
+              <div class="col-sm-2"> <!-- text-right-->
+                <div class = "flex-container">
+                  <div class="item"><img id="weatherIcon"></div>
+                  <div class="item" id="tempId"></div>
+                </div> 
+                <div class = "flex-container">
+                  <div class="item" id="cityId"></div>
+                </div>                 
+              </div> <!-- .col-sm-2 -->
+          </div><!--.row-->
+      </div><!--.container-fluid-->
+  </section><!-- #top -->
 
     <!--=================== Center ===================-->
 
@@ -126,9 +134,9 @@
 
     <!--=================== Footer ===================-->
 
-    <section id="footer">
-      <div class="container-fluid">
-        <div class="row">
+  <section id="footer">
+    <div class="container-fluid">
+      <div class="row v-adjust">
 
           <!--========== Bottom Left =========-->
 
@@ -140,14 +148,45 @@
                   aria-expanded="false">
                  </i>
 
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Separated link</a></li>
-                </ul><!-- .dropdown-menu -->
-              </div><!-- .dropup -->
+                 <ul class="dropdown-menu settings-dropup" aria-labelledby="dropdownMenu2">
+                   <li><a href="#" class="text-center">Settings</a></li> 
+                   <li role="separator" class="divider"></li>
+                   <li>
+                    <a href="#">
+                      <div class="settings-flex-container">Toggle Temperature Unit
+                        <label class="switch">
+                          <input name="units" type="checkbox" id="temp-checkbox"><span class="slider round"></span>
+                        </label>
+                      </div>
+                    </a>
+                  </li>
+                   <li>
+                    <a href="#">
+                      <div class="settings-flex-container">Show Weather                    
+                        <label class="switch">
+                          <input name="units" type="checkbox" id="weather-checkbox"><span class="slider round"></span>
+                        </label>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="settings-flex-container">Show Clock
+                        <label class="switch">
+                        <input name="units" type="checkbox" id="clock-checkbox"><span class="slider round"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="settings-flex-container">Show To-Do
+                        <label class="switch">
+                        <input name="units" type="checkbox" id="clock-checkbox"><span class="slider round"></span>
+                      </div>
+                    </a>
+                  </li>                                        
+                 </ul><!-- .dropdown-menu -->
+               </div><!-- .dropup -->
 
             </div><!-- #preferences -->
           </div><!-- #bottom-left -->
@@ -174,7 +213,7 @@
 
           <!--========== Bottom Right =========-->
 
-          <div id="bottom-right" class="col-md-2">
+         <div id="bottom-right" class="col-md-2">
 
             <!--========== Todo =========-->
 

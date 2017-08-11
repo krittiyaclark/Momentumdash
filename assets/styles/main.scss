@@ -1,4 +1,4 @@
-@import 'variables';
+@import '_variables';
 @import '_normalize';
 @import 'mixins';
 @import '_background';
@@ -120,10 +120,6 @@
     #{$a-tags-hover} {
     color: $color-grey;
     }
-}
-
-.cornerPadTop {
-    padding-top: 20px;
 }
 
 //######### Todo #########//
@@ -352,3 +348,141 @@
     }
    }
  }
+
+//######### Top #########//
+
+.cornerPadTop {
+    padding-top: 20px;
+    height: 70px;
+}
+
+//######### Weather #########//
+
+.item {
+  padding-left: 10px;
+}
+
+#weatherIcon {
+  max-width: 25px;
+  padding-top: 5px;
+}
+
+#tempId {
+  font-size: x-large;
+}
+
+.degree {
+  font-size: x-large;
+}
+
+#cityId {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: x-small;
+}
+
+//######### Footer - Vertical Alignment #########// 
+
+.v-adjust {    
+  display: flex;
+  flex-direction: row; 
+  [class^="col-"], [class*="col-"] {
+        display: flex;
+        align-items: center;
+  }
+  .col-md-8 {
+        justify-content: center;
+    }    
+}
+
+#bottom-left {
+    margin-bottom: 3%;
+}
+
+#bottom-right {
+    justify-content: flex-end;
+    margin-bottom: 3%;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  // margin-bottom: 5px;
+}
+
+//######### Settings Switch #########//
+
+/* The switch - the box around the slider (label) */
+.switch {
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+  position: relative;
+  /* Hide default HTML checkbox (label > input) */
+  input {display:none;}
+}
+
+/* The slider */
+.slider { 
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+
+  &:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 17px;
+  &:before {
+    border-radius: 50%;
+  }
+}
+
+//######### Settings Dropup Menu #########//
+
+.settings-dropup {
+  width: 300px;
+  // li a {
+    // color: $color-white; (delete and style in .dropdown-menu)
+  // }
+}
+.settings-flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  * {
+   outline: 1px solid red;
+  }
