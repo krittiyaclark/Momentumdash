@@ -58,4 +58,13 @@ $(document).ready(function() {
     }); 
 
     load();
+
+    /* Show/Hide Weather */
+    $('#clock-checkbox').change(function () {
+        if (this.checked) {
+            $('.center-clock').hide();
+        } else $('.center-clock').show();
+    });
+
+
 }); // end document.ready

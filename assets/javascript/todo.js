@@ -139,4 +139,12 @@ window.onload = function () {
             list.insertBefore(item, list.childNodes[0]);
             
         } // end addItem
+
+        /* Show/Hide Weather */
+        $('#todo-checkbox').change(function () {
+            if (this.checked) {
+                $('#todo').hide();
+            } else $('#todo').show();
+        });
+
 } // window.onload
