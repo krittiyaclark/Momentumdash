@@ -140,7 +140,7 @@ window.onload = function () {
             
         } // end addItem
 
-        /* Show/Hide Weather */
+        // Show/Hide Todo
         $('#todo-checkbox').change(function () {
             if (this.checked) {
                 $('#todo').hide();

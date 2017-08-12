@@ -59,7 +59,7 @@ $(document).ready(function() {
 
     load();
 
-    /* Show/Hide Weather */
+    // Show/Hide Clock
     $('#clock-checkbox').change(function () {
         if (this.checked) {
             $('.center-clock').hide();
