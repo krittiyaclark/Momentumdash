@@ -484,3 +484,32 @@ input:checked + .slider:before {
   align-items: center;
 }
 
+//######### Main Focus #########//
+
+.focusBox {
+  display: flex;
+  justify-content: center;
+}
+.focusItem {
+  padding: 0px 20px;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.focusCheckbox {
+  cursor: hand;
+  cursor: pointer;
+  &:hover {
+    color: #25b99a;
+  }
+}
+
+.focusTrash {
+  cursor: hand;
+  cursor: pointer;
+  &:hover {
+    color: #e85656;
+  }
+}

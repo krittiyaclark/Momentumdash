@@ -66,6 +66,7 @@
       <div class="container">
         <div class="row">
           <div id="center">
+
             <div class="col-md-6 col-md-offset-3 text-center">
 
               <!--========== Clock =========-->
@@ -106,7 +107,7 @@
                 <input id="greeting-form" type="text">
               </div><!-- #center-box -->
 
-            </div><!-- #center -->
+            </div><!-- .col-md-6 .col-md-offset-3 -->
 
             <!--========== Center Below =========-->
 
@@ -119,13 +120,20 @@
                   <h3>
                     What is your main focus for today?
                   </h3>
-                  <input type="text" />
+                  <input type="text" name="mainFocusItem"/>
 
+                  <div class="focusBox">
+                    <span class="focusCheckbox"><i class="fa fa-lg fa-check-circle-o" aria-hidden="true"></i></span>
+                    <span class="focusItem"></span>
+                    <span class="focusTrash"><i class="fa fa-lg fa-trash-o" aria-hidden="true"></i></span>
+                  </div><!--.focusBox-->
+                
                 </div><!-- .focuses-text -->
 
-              </div><!-- #focuses -->
-            </div><!-- .col-md-6 .col-md-offset-3 -->
-          </div><!-- #center-below -->
+              </div><!-- #focuses .col-md-6 col-md-offset-3 -->
+            </div><!-- #center-below -->
+
+          </div><!-- #center -->
         </div><!-- .row -->
       </div><!-- .container -->
     </section><!-- #main-box -->
@@ -260,7 +268,7 @@
   <script src="assets/javascript/todo.js" type="text/javascript"></script>
   <script src="assets/javascript/toggle.js" type="text/javascript"></script>
   <script src="assets/javascript/clock.js" type="text/javascript"></script>
-
+  <script src="assets/javascript/main-focus.js" type="text/javascript"></script>
 
 </body>
 

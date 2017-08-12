@@ -822,3 +822,31 @@ input:checked + .slider:before {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
+
+.focusBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.focusItem {
+  padding: 0px 20px; }
+
+.strike {
+  text-decoration: line-through; }
+
+.focusCheckbox {
+  cursor: hand;
+  cursor: pointer; }
+  .focusCheckbox:hover {
+    color: #25b99a; }
+
+.focusTrash {
+  cursor: hand;
+  cursor: pointer; }
+  .focusTrash:hover {
+    color: #e85656; }
