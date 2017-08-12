@@ -8,12 +8,12 @@ $(function() {
     
     function taskNotSet() {
         $('.focusBox').hide();
-        $('input[name=mainFocusItem').show();
+        $('input[name=mainFocusItem]').show();
     }
 
     function taskSet() {
         $('.focusBox').show();
-        $('input[name=mainFocusItem').hide();
+        $('input[name=mainFocusItem]').hide();
         $('.focusItem').html(localStorage.getItem('permanentTask'));
     }
 
@@ -28,10 +28,11 @@ $(function() {
     });
 
     $('.focusTrash').click(function(){
-        $('input[name=mainFocusItem').show();
+        $('input[name=mainFocusItem]').show();
         $('.focusBox').hide();
         $('input[name=mainFocusItem]').val("");
-        Storage.removeItem('permanentTask');
+        localStorage.removeItem('permanentTask');
+        $('.focusItem').removeClass('strike');
     });
 
     $('.focusCheckbox').click(function(){
