@@ -14,7 +14,7 @@ $(function() {
     function taskSet() {
         $('.focusBox').show();
         $('input[name=mainFocusItem').hide();
-        $('.focusItem').append(localStorage.getItem('permanentTask'));
+        $('.focusItem').html(localStorage.getItem('permanentTask'));
     }
 
     $('input[name=mainFocusItem').keydown(function(e) {
@@ -22,15 +22,16 @@ $(function() {
             $('.focusBox').show();
             $(this).hide();
             var mainFocusAdd = $('input[name=mainFocusItem]').val();
-            localStorage.setItem('permanentTask', mainFocusAdd);
-            $('.focusItem').append('<p class="deleteLater">' + mainFocusAdd + '</p>');
+            $('.focusItem').html(mainFocusAdd);
+            localStorage.setItem('permanentTask', mainFocusAdd);            
         } 
     });
 
     $('.focusTrash').click(function(){
         $('input[name=mainFocusItem').show();
         $('.focusBox').hide();
-        localStorage.removeItem("permanentTask");
+        $('input[name=mainFocusItem]').val("");
+        Storage.removeItem('permanentTask');
     });
 
     $('.focusCheckbox').click(function(){
