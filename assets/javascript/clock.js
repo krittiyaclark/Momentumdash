@@ -61,17 +61,16 @@ $(document).ready(function() {
     
     /* Prevent Click */
     $('.slider-clock').click(function (e) {
-        e.preventDefault();
-        //e.stopPropagation();
+        e.stopPropagation();
     }); 
 
     // Show/Hide Clock
-    $('#clock-checkbox').change(function (e) {
-        e.preventDefault();
+    $('#clock-checkbox').change(function () {
+        // e.preventDefault();
         // e.stopPropagation();
         if (this.checked) {
-            $('.center-clock').hide();
-        } else $('.center-clock').show();
+            $('.center-clock').css('opacity', '0');
+        } else $('.center-clock').css('opacity', '5');
     });
 
 
