@@ -480,6 +480,18 @@ body {
   .dropdown-menu li a {
     color: #7b8b8e; }
 
+.dropdown-toggle {
+  cursor: pointer; }
+
+#dropdown-menu-list {
+  padding: 9px 15px 9px 15px; }
+  #dropdown-menu-list li {
+    font-size: 15px;
+    padding: 5px 0 5px 0; }
+    #dropdown-menu-list li a:hover {
+      text-decoration: none;
+      color: #edf0f1; }
+
 .quote {
   border-left: 0;
   margin-top: 30px; }

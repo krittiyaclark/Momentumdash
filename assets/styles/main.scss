@@ -101,6 +101,22 @@
   }
 }
 
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+#dropdown-menu-list {
+  padding: 9px 15px 9px 15px;
+  li {
+    font-size: $font-size; 
+    padding: 5px 0 5px 0;
+    a:hover {
+      text-decoration: none;
+      color: $color-off-white;
+    }
+  }
+}
+
 //######### Quote #########//
 
 .quote {

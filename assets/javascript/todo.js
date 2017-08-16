@@ -141,7 +141,8 @@ window.onload = function () {
         } // end addItem
 
         // Show/Hide Todo
-        $('#todo-checkbox').change(function () {
+        $('#todo-checkbox').change(function (e) {
+            e.preventDefault();
             if (this.checked) {
                 $('#todo').hide();
             } else $('#todo').show();

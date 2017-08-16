@@ -58,9 +58,15 @@ $(document).ready(function() {
     }); 
 
     load();
+    
+    /* Prevent Click */
+    $('.settings-dropup').click(function (e) {
+        e.stopPropagation();
+    }); 
 
     // Show/Hide Clock
-    $('#clock-checkbox').change(function () {
+    $('#clock-checkbox').change(function (e) {
+        e.preventDefault();
         if (this.checked) {
             $('.center-clock').hide();
         } else $('.center-clock').show();
