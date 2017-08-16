@@ -60,13 +60,15 @@ $(document).ready(function() {
     load();
     
     /* Prevent Click */
-    $('.settings-dropup').click(function (e) {
-        e.stopPropagation();
+    $('.slider-clock').click(function (e) {
+        e.preventDefault();
+        //e.stopPropagation();
     }); 
 
     // Show/Hide Clock
     $('#clock-checkbox').change(function (e) {
         e.preventDefault();
+        // e.stopPropagation();
         if (this.checked) {
             $('.center-clock').hide();
         } else $('.center-clock').show();

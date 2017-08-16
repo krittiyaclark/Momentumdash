@@ -562,7 +562,7 @@ body {
   width: 100%;
   float: left;
   max-height: 350px;
-  overflow: scroll; }
+  overflow: auto; }
   .container-todo-list ul.todo {
     width: 100%;
     float: left;
