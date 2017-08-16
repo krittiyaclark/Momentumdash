@@ -139,4 +139,5 @@ window.onload = function () {
             list.insertBefore(item, list.childNodes[0]);
             
         } // end addItem
+
 } // window.onload
