@@ -807,7 +807,16 @@ input:checked + .slider:before {
     border-radius: 50%; }
 
 .settings-dropup {
-  width: 300px; }
+  width: 300px;
+  background: black;
+  background: rgba(0, 0, 0, 0.8); }
+  .settings-dropup li a {
+    color: #fff;
+    opacity: 0.8; }
+    .settings-dropup li a:hover {
+      background-color: initial;
+      color: #fff;
+      opacity: 1; }
 
 .settings-flex-container {
   display: -webkit-box;
@@ -831,7 +840,8 @@ input:checked + .slider:before {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  font-size: 187.5%; }
 
 .focusItem {
   padding: 0px 20px; }

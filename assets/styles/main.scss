@@ -474,10 +474,23 @@ input:checked + .slider:before {
 
 .settings-dropup {
   width: 300px;
-  // li a {
-    // color: $color-white; (delete and style in .dropdown-menu)
-  // }
+
+  // Delete and style in .dropdown-menu
+  background: rgb(0,0,0); // fallback
+  background: rgba(0,0,0,0.8);
+
+  li a {
+    color: $color-white; 
+    opacity: 0.8;
+    &:hover {
+      background-color: initial;
+      color: $color-white;   
+      opacity: 1;
+    }
+  }
+
 }
+
 .settings-flex-container {
   display: flex;
   justify-content: space-between;
@@ -489,6 +502,7 @@ input:checked + .slider:before {
 .focusBox {
   display: flex;
   justify-content: center;
+  font-size: $font-size-h3;
 }
 .focusItem {
   padding: 0px 20px;
