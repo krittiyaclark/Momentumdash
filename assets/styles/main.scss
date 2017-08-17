@@ -74,7 +74,7 @@
     input {
       width: 450px;
       border-bottom-width: 2px;
-      font-size: 120%;
+      font-size: $font-size-h3; //120%
       display: block;
       background: 0;
       border: 0;
@@ -83,6 +83,7 @@
       font-weight: 500;
       outline: 0;
       margin: 0 auto;
+      text-align: center;
     }
 }
 
@@ -404,9 +405,22 @@
   // margin-bottom: 5px;
 }
 
+//######### Mobile View Footer Position #########//
+#top {
+min-height: 11vh;
+}
+
+#main-box {
+min-height: 73vh;
+}
+
+#footer {
+min-height: 16vh;
+}
+
 //######### Footer - Vertical Alignment #########// 
 
-.v-adjust {    
+.v-adjust {   
   display: flex;
   flex-direction: row; 
   [class^="col-"], [class*="col-"] {
@@ -490,13 +504,56 @@ input:checked + .slider:before {
 
 .settings-dropup {
   width: 300px;
-  // li a {
-    // color: $color-white; (delete and style in .dropdown-menu)
-  // }
+
+  // Delete and style in .dropdown-menu
+  background: rgb(0,0,0); // fallback
+  background: rgba(0,0,0,0.8);
+
+  li a {
+    color: $color-white; 
+    opacity: 0.8;
+    &:hover {
+      background-color: initial;
+      color: $color-white;   
+      opacity: 1;
+    }
+  }
+
 }
+
 .settings-flex-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+//######### Main Focus #########//
+
+.focusBox {
+  display: flex;
+  justify-content: center;
+  font-size: $font-size-h3;
+}
+.focusItem {
+  padding: 0px 20px;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.focusCheckbox {
+  cursor: hand;
+  cursor: pointer;
+  &:hover {
+    color: #25b99a;
+  }
+}
+
+.focusTrash {
+  cursor: hand;
+  cursor: pointer;
+  &:hover {
+    color: #e85656;
+  }
+}

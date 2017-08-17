@@ -460,7 +460,7 @@ body {
   #center-below input {
     width: 450px;
     border-bottom-width: 2px;
-    font-size: 120%;
+    font-size: 187.5%;
     display: block;
     background: 0;
     border: 0;
@@ -468,7 +468,8 @@ body {
     color: #fff;
     font-weight: 500;
     outline: 0;
-    margin: 0 auto; }
+    margin: 0 auto;
+    text-align: center; }
 
 #todo {
   float: right;
@@ -731,6 +732,15 @@ body {
   -ms-flex-pack: end;
   justify-content: flex-end; }
 
+#top {
+  min-height: 11vh; }
+
+#main-box {
+  min-height: 73vh; }
+
+#footer {
+  min-height: 16vh; }
+
 .v-adjust {
   display: -webkit-box;
   display: -webkit-flex;
@@ -819,7 +829,16 @@ input:checked + .slider:before {
     border-radius: 50%; }
 
 .settings-dropup {
-  width: 300px; }
+  width: 300px;
+  background: black;
+  background: rgba(0, 0, 0, 0.8); }
+  .settings-dropup li a {
+    color: #fff;
+    opacity: 0.8; }
+    .settings-dropup li a:hover {
+      background-color: initial;
+      color: #fff;
+      opacity: 1; }
 
 .settings-flex-container {
   display: -webkit-box;
@@ -834,3 +853,32 @@ input:checked + .slider:before {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center; }
+
+.focusBox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 187.5%; }
+
+.focusItem {
+  padding: 0px 20px; }
+
+.strike {
+  text-decoration: line-through; }
+
+.focusCheckbox {
+  cursor: hand;
+  cursor: pointer; }
+  .focusCheckbox:hover {
+    color: #25b99a; }
+
+.focusTrash {
+  cursor: hand;
+  cursor: pointer; }
+  .focusTrash:hover {
+    color: #e85656; }
