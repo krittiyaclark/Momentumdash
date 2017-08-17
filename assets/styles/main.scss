@@ -74,7 +74,7 @@
     input {
       width: 450px;
       border-bottom-width: 2px;
-      font-size: 120%;
+      font-size: $font-size-h3; //120%
       display: block;
       background: 0;
       border: 0;
@@ -83,6 +83,7 @@
       font-weight: 500;
       outline: 0;
       margin: 0 auto;
+      text-align: center;
     }
 }
 
@@ -388,9 +389,22 @@
   // margin-bottom: 5px;
 }
 
+//######### Mobile View Footer Position #########//
+#top {
+min-height: 11vh;
+}
+
+#main-box {
+min-height: 73vh;
+}
+
+#footer {
+min-height: 16vh;
+}
+
 //######### Footer - Vertical Alignment #########// 
 
-.v-adjust {    
+.v-adjust {   
   display: flex;
   flex-direction: row; 
   [class^="col-"], [class*="col-"] {

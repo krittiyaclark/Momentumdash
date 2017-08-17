@@ -7,29 +7,31 @@ $(function() {
     }
     
     function taskNotSet() {
-        $('.focusBox').hide();
+        $('.focusBox').hide();      
         $('input[name=mainFocusItem]').show();
     }
 
     function taskSet() {
-        $('.focusBox').show();
+        $('.focusBox').show();        
         $('input[name=mainFocusItem]').hide();
         $('.focusItem').html(localStorage.getItem('permanentTask'));
     }
 
     $('input[name=mainFocusItem').keydown(function(e) {
         if (e.keyCode == 13) {
-            $('.focusBox').show();
-            $(this).hide();
+            $(this).hide();           
+            $('.focusBox').fadeIn();
+                      
             var mainFocusAdd = $('input[name=mainFocusItem]').val();
             $('.focusItem').html(mainFocusAdd);
-            localStorage.setItem('permanentTask', mainFocusAdd);            
+            localStorage.setItem('permanentTask', mainFocusAdd);           
         } 
     });
 
     $('.focusTrash').click(function(){
-        $('input[name=mainFocusItem]').show();
-        $('.focusBox').hide();
+        $('.focusBox').hide();        
+        $('input[name=mainFocusItem]').fadeIn();        
+
         $('input[name=mainFocusItem]').val("");
         localStorage.removeItem('permanentTask');
         $('.focusItem').removeClass('strike');
