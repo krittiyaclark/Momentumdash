@@ -9,7 +9,7 @@
   <meta name="keywords" content="HTML5,CSS, CSS3, JavaScript, API, JSON, Bootstrap">
   <meta name="author" content="Krittiya Clark">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Quicksand|Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/styles/main.css" rel="stylesheet" type="text/css">
@@ -101,15 +101,13 @@
                 <h2>
                   What's your name?
                 </h2>
-                <input id="greeting-form" type="text">
+                <input id="greeting-form" type="text" />
               </div><!-- #center-box -->
-
-            </div><!-- .col-md-6 .col-md-offset-3 -->
 
             <!--========== Center Below =========-->
 
             <div id="center-below">
-              <div id="focuses" class="col-md-6 col-md-offset-3 text-center">
+              <div id="focuses">
 
                 <!--========== Focuse Text =========-->
 
@@ -117,7 +115,7 @@
                   <h3>
                     What is your main focus for today?
                   </h3>
-                  <input type="text" name="mainFocusItem"/>
+                  <input type="text" name="mainFocusItem" />
                   <div class="focusBox">
                     <span class="focusCheckbox"><i class="fa fa-lg fa-check-circle-o" aria-hidden="true"></i></span>
                     <span class="focusItem"></span>
@@ -126,9 +124,30 @@
                 
                 </div><!-- .focuses-text -->
 
-              </div><!-- #focuses .col-md-6 col-md-offset-3 -->
+              </div><!-- #focuses -->
+
+              <!--========== Bottom Center =========-->
+
+              <div id="bottom-center">
+
+                <!--========== Quote =========-->
+
+                <blockquote class="quote text-center">
+                  <p id="quotation"></p>
+                  <p id="author"></p>
+
+                  <p class="tweet">
+                    <a href="#" id="share-quote">
+                    <i class="fa fa-twitter fa-fw tweet-icon"></i>
+                </a>
+                  </p>
+                </blockquote>
+
+              </div><!--#bottom-center -->
 
             </div><!-- #center-below -->
+
+            </div><!-- .col-md-6 .col-md-offset-3 -->
 
           </div><!-- #center -->
         </div><!-- .row -->
@@ -145,7 +164,7 @@
 
           <!--========== Bottom Left =========-->
 
-          <div id="bottom-left" class="col-sm-2">
+          <div id="bottom-left" class="col-sm-6">
             <div id="preferences">
 
               <div class="dropup">
@@ -195,30 +214,10 @@
 
             </div><!-- #preferences -->
           </div><!-- #bottom-left -->
-
-          <!--========== Bottom Center =========-->
-
-          <div id="bottom-center" class="col-sm-8">
-
-            <!--========== Quote =========-->
-
-            <blockquote class="quote text-center">
-              <p id="quotation"></p>
-              <p id="author"></p>
-
-              <p class="tweet">
-                <a href="#" id="share-quote">
-                    <i class="fa fa-twitter fa-fw tweet-icon"></i>
-                </a>
-              </p>
-            </blockquote>
-
-
-          </div><!--#bottom-center -->
-
+          
           <!--========== Bottom Right =========-->
 
-         <div id="bottom-right" class="col-sm-2">
+         <div id="bottom-right" class="col-sm-6">
 
             <!--========== Todo =========-->
 

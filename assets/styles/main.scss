@@ -3,36 +3,41 @@
 @import 'mixins';
 @import '_background';
 
-//######### Center Column #########//
+h1,
+h2,
+h3,
+p {
+    font-family: 'Lato', sans-serif;
+}
 
+//######### Center Column #########//
 #center {
     display: block;
     top: 50%;
     width: 100%;
     text-align: center;
     h1#time {
-      font-size: $font-size-jumbo;
-      font-weight: $font-weight-h1;
-      margin-bottom: 0;
+        font-size: $font-size-jumbo;
+        font-weight: $font-weight-h1;
+        margin-bottom: 0;
     }
     .format {
-      position: absolute;
-      left: 102%;
-      bottom: 9%;
-      font-size: 150%;
-      opacity: 0;
+        position: absolute;
+        left: 102%;
+        bottom: 9%;
+        font-size: 150%;
+        opacity: 0;
     }
     h2 {
-      font-size: $font-size-h2;
-      font-weight: $font-weight-h2;
-      line-height: 1;
-      letter-spacing: 1px;
-      margin-bottom: 30px;
+        font-size: $font-size-h2;
+        font-weight: $font-weight-h2;
+        line-height: 1;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
     }
 }
 
 //######### Greeting Form #########//
-
 #center-box {
     display: block;
     top: 50%;
@@ -41,26 +46,25 @@
     text-align: center;
     margin-bottom: 50px;
     h3 {
-      font-size: $font-size-h3;
-      font-weight: $font-weight-h3;
+        font-size: $font-size-h3;
+        font-weight: $font-weight-h3;
     }
     input {
-      width: 450px;
-      border-bottom-width: 2px;
-      display: block;
-      font-size: $font-size-h2;
-      background: 0;
-      border: 0;
-      border-bottom: 3px solid #fff;
-      color: #fff;
-      font-weight: 500;
-      outline: 0;
-      margin: 0 auto;
+        width: 450px;
+        border-bottom-width: 2px;
+        display: block;
+        font-size: $font-size-h2;
+        background: 0;
+        border: 0;
+        border-bottom: 3px solid #fff;
+        color: #fff;
+        font-weight: 500;
+        outline: 0;
+        margin: 0 auto;
     }
 }
 
 //######### Main Focus #########//
-
 #center-below {
     display: block;
     top: 50%;
@@ -68,368 +72,333 @@
     width: 100%;
     text-align: center;
     h3 {
-      font-size: $font-size-h3;
-      font-weight: inherit;
+        font-size: $font-size-h3;
+        font-weight: inherit;
     }
     input {
-      width: 450px;
-      border-bottom-width: 2px;
-      font-size: $font-size-h3; //120%
-      display: block;
-      background: 0;
-      border: 0;
-      border-bottom: 3px solid #fff;
-      color: #fff;
-      font-weight: 500;
-      outline: 0;
-      margin: 0 auto;
-      text-align: center;
+        width: 450px;
+        border-bottom-width: 2px;
+        font-size: $font-size-h3; //120%
+        display: block;
+        background: 0;
+        border: 0;
+        border-bottom: 3px solid #fff;
+        color: #fff;
+        font-weight: 500;
+        outline: 0;
+        margin: 0 auto;
+        text-align: center;
     }
 }
 
 //######### Toggle #########//
-
 #todo {
-   float: right;
-   right: 0;
-   position: relative;
+    float: right;
+    right: 0;
+    position: relative;
 }
 
 .dropdown-menu {
-  background-color: $color-drak-grey;
-  li a {
-    color: $color-grey;
-  }
+    background-color: $color-drak-grey;
+    li a {
+        color: $color-grey;
+    }
 }
 
 .dropdown-toggle {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 #dropdown-menu-list {
-  padding: 9px 15px 9px 15px;
-  li {
-    font-size: $font-size; 
-    padding: 5px 0 5px 0;
-    a:hover {
-      text-decoration: none;
-      color: $color-off-white;
+    padding: 9px 15px 9px 15px;
+    li {
+        font-size: $font-size;
+        padding: 5px 0 5px 0;
+        a:hover {
+            text-decoration: none;
+            color: $color-off-white;
+        }
     }
-  }
 }
 
 //######### Quote #########//
-
 .quote {
-  border-left: 0;
-  margin-top: 30px;
-  #quotation::before {
-    font-family: FontAwesome;
-    content: "\f10d";
-  }
+    border-left: 0;
+    margin-top: 30px;
+    #quotation::before {
+        font-family: FontAwesome;
+        content: "\f10d";
+    }
 }
 
 .tweet {
-  #{$a-tags} {
-    color: $color-white;
-    text-decoration: none;
-}
+    #{$a-tags} {
+        color: $color-white;
+        text-decoration: none;
+    }
     #{$a-tags-hover} {
-    color: $color-grey;
+        color: $color-grey;
     }
 }
 
 //######### Todo #########//
-
 .todo-container {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
+
 .todo-pane {
-  background: $color-drak-grey;
-  right: 3px;
-  text-align: left;
-  display: none;
-  bottom: 50px;
-  position: absolute;
-  padding: 15px;
-  z-index: 9999;
-  left: -300px;
-  @include border-radius(5px);
-     input {
-      height: 36px;
-      width: 100%;
-      padding: 6px 15px 7px;
-
-      float: left;
-      color: rgba(255, 255, 255, 0.75);
-      font-size: $font-size;
-      text-indent: 18px;
-      padding: 0 60px 0 0;
-      margin-bottom:  25px;
-      background: rgba(255, 255, 255, 0.2);
-      border: 0;
-      outline: none;
-      @include border-radius(5px 5px 5px 5px);
-      @include box-shadow(none);
-
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      @include placeholder();
+    background: $color-drak-grey;
+    right: 3px;
+    text-align: left;
+    display: none;
+    bottom: 50px;
+    position: absolute;
+    padding: 15px;
+    z-index: 9999;
+    left: -300px;
+    @include border-radius(5px);
+    input {
+        height: 36px;
+        width: 100%;
+        padding: 6px 15px 7px;
+        float: left;
+        color: rgba(255, 255, 255, 0.75);
+        font-size: $font-size;
+        text-indent: 18px;
+        padding: 0 60px 0 0;
+        margin-bottom: 25px;
+        background: rgba(255, 255, 255, 0.2);
+        border: 0;
+        outline: none;
+        @include border-radius(5px 5px 5px 5px);
+        @include box-shadow(none);
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        @include placeholder();
     }
 }
 
 .toggle {
-  position: relative;
-  top: 0;
-  padding-right: 15px;
-  right: 0;
-  cursor: pointer;
+    position: relative;
+    top: 0;
+    padding-right: 15px;
+    right: 0;
+    cursor: pointer;
 }
 
 .container-todo-list {
-  width: 100%;
-  float: left;
-  //padding: 15px;
-
-  max-height: 350px;
-  overflow: auto;
-
-   ul.todo {
-      width: 100%;
-      float: left;
-      padding: 0;
-
-      li {
+    width: 100%;
+    float: left; //padding: 15px;
+    max-height: 350px;
+    overflow: auto;
+    ul.todo {
         width: 100%;
         float: left;
-        min-height: 30px;
-        font-size: $font-size;
-        font-weight: $color-white;
-        color: $color-grey;
-        line-height: 30px;
-        list-style: none;
-
-        background: $color-light-grey;
-        position: relative;
-        margin: 0 0 10px 0;
-        padding: 0 100px 0 7px;
-        word-break: break-word;
-        @include border-radius(5px);
-        @include box-shadow(0px 1px 2px rgba(44, 62, 80, 0.10));
-
-          @include even() {
+        padding: 0;
+        li {
+            width: 100%;
+            float: left;
+            min-height: 30px;
+            font-size: $font-size;
+            font-weight: $color-white;
+            color: $color-grey;
+            line-height: 30px;
+            list-style: none;
             background: $color-light-grey;
-          }
-
-          @include odd() {
-            background: $color-off-grey;
-          }  
-              &:last-of-type {
-                 margin: 0;
-              }
-                    .buttons {
-                        width: 50px;
-                        height: 7px;
-
+            position: relative;
+            margin: 0 0 10px 0;
+            padding: 0 100px 0 7px;
+            word-break: break-word;
+            @include border-radius(5px);
+            @include box-shadow(0px 1px 2px rgba(44, 62, 80, 0.10));
+            @include even() {
+                background: $color-light-grey;
+            }
+            @include odd() {
+                background: $color-off-grey;
+            }
+            &:last-of-type {
+                margin: 0;
+            }
+            .buttons {
+                width: 50px;
+                height: 7px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                line-height: 30px;
+                display: flex;
+                justify-content: space-around;
+                button {
+                    width: 50px;
+                    height: 7px;
+                    float: left;
+                    background: none;
+                    position: relative;
+                    border: 0px;
+                    box-shadow: none;
+                    outline: none;
+                    cursor: pointer;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    &:last-of-type:before {
+                        content: '';
+                        width: 1px;
+                        height: 30px;
+                        background: $color-off-white;
+                        position: absolute;
+                        top: 10px;
+                        left: 0;
+                    }
+                    i {
+                        width: 21px;
+                        height: 21px;
                         position: absolute;
                         top: 0;
-                        right: 0;
-                        line-height: 30px;
-                        display: flex;
-                        justify-content: space-around;
-
-                        button {
-                            width: 50px;
-                            height: 7px;
-                            float: left;
-                            background: none;
-                            position: relative;
-                            border: 0px;
-                            box-shadow: none;
-                            outline: none;
-                            cursor: pointer;
-
-                            -webkit-appearance: none;
-                            -moz-appearance: none;
-                            
-                            &:last-of-type:before {
-                              content: '';
-                              width: 1px;
-                              height: 30px;
-                              background: $color-off-white;
-
-                              position: absolute;
-                              top: 10px;
-                              left: 0;
-                            }
-
-                            i {
-                              width: 21px;
-                              height: 21px;
-
-                              position: absolute;
-                              top: 0;
-                              left: 0;
-
-                              margin: -11px 0 0 -11px;
-
-                            }
-
-                            &.complete i {
-                                @include border-radius(11px);
-                                border: 1.5px solid $color-green;
-
-                                transition: background 0.2s ease;
-                            }
-                         }          
-                      } 
-        }       
-
-      &#completed li .buttons button.complete i {
-        background: $color-green;
-        border: 0px;
-      }
-
-      &:not(#completed) li .buttons button.complete:hover i {
-        background: rgba(37, 185, 154, 0.75);
-        .fill {
-          fill: #fff;
+                        left: 0;
+                        margin: -11px 0 0 -11px;
+                    }
+                    &.complete i {
+                        @include border-radius(11px);
+                        border: 1.5px solid $color-green;
+                        transition: background 0.2s ease;
+                    }
+                }
+            }
         }
-      }
-
-  &#completed li .buttons button.complete i .fill {
-    fill: #fff;
-  }
-
-  li .buttons button {
-    i .fill {
-      transition: fill 0.2s ease;
+        &#completed li .buttons button.complete i {
+            background: $color-green;
+            border: 0px;
+        }
+        &:not(#completed) li .buttons button.complete:hover i {
+            background: rgba(37, 185, 154, 0.75);
+            .fill {
+                fill: #fff;
+            }
+        }
+        &#completed li .buttons button.complete i .fill {
+            fill: #fff;
+        }
+        li .buttons button {
+            i .fill {
+                transition: fill 0.2s ease;
+            }
+            &.remove {
+                i .fill {
+                    fill: #c0cecb;
+                }
+                &:hover i .fill {
+                    fill: #e85656;
+                }
+            }
+            &.complete i .fill {
+                fill: #25b99a;
+            }
+        }
+        &#completed {
+            position: relative;
+            padding: 30px 0 0 0;
+            &::before {
+                content: '';
+                width: 150px;
+                height: 1px;
+                background: $color-very-light-blue;
+                position: absolute;
+                top: 15px;
+                left: 50%;
+                margin: 0 0 0 -75px;
+            }
+        }
+        &#todoList:empty:after {
+            content: 'Your to-do is empty!';
+            margin: 15px 0 0 0;
+        }
+        &#completed:empty:after {
+            content: 'To-Do complete tasks.';
+        }
+        &#todoList:after,
+        &#completed:after {
+            width: 100%;
+            display: block;
+            text-align: center;
+            font-size: 12px;
+            color: $color-grey;
+        }
+        .completed i:hover {
+            cursor: pointer;
+            color: $color-green;
+        }
+        .remove i:hover {
+            cursor: pointer;
+            color: $color-red;
+        }
     }
-
-    &.remove {
-      i .fill {
-        fill: #c0cecb;
-      }
-
-      &:hover i .fill {
-        fill: #e85656;
-      }
-    }
-    
-    &.complete i .fill {
-      fill: #25b99a;
-    }
-  }
-
-  &#completed {
-    position: relative;
-    padding: 30px 0 0 0;
-    &::before {
-      content: '';
-      width: 150px;
-      height: 1px;
-      background: $color-very-light-blue;
-      position: absolute;
-      top: 15px;
-      left: 50%;
-      margin: 0 0 0 -75px;
-    }
-  }
-
-  &#todoList:empty:after {
-    content: 'Your to-do is empty!';
-    margin: 15px 0 0 0;
-  }
-
-  &#completed:empty:after {
-    content: 'To-Do complete tasks.';
-  }
-  
-  &#todoList:after, &#completed:after {
-    width: 100%;
-    display: block;
-    text-align: center;
-    font-size: 12px;
-    color: $color-grey;
-  }
-
-    .completed i:hover {
-      cursor: pointer;
-      color: $color-green;
-    }
-
-    .remove i:hover {
-      cursor: pointer;
-      color: $color-red;
-    }
-   }
- }
+}
 
 //######### Top #########//
-
 .cornerPadTop {
     padding-top: 20px;
     height: 70px;
 }
 
 //######### Weather #########//
-
 .item {
-  padding-left: 10px;
+    padding-left: 10px;
 }
 
 #weatherIcon {
-  max-width: 25px;
-  padding-top: 5px;
+    max-width: 25px;
+    padding-top: 5px;
 }
 
 #tempId {
-  font-size: x-large;
+    font-size: x-large;
 }
 
 .degree {
-  font-size: x-large;
+    font-size: x-large;
 }
 
 #cityId {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: x-small;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: x-small;
 }
 
 .flex-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  // margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; // margin-bottom: 5px;
 }
 
 //######### Mobile View Footer Position #########//
 #top {
-min-height: 11vh;
+    min-height: 11vh;
 }
 
 #main-box {
-min-height: 73vh;
+    min-height: 83vh;
+    display: flex;
+    align-items: center;
 }
 
 #footer {
-min-height: 16vh;
+    min-height: 16vh;
 }
 
 //######### Footer - Vertical Alignment #########// 
-
-.v-adjust {   
-  display: flex;
-  flex-direction: row; 
-  [class^="col-"], [class*="col-"] {
+.v-adjust {
+    display: flex;
+    flex-direction: row;
+    [class^="col-"],
+    [class*="col-"] {
         display: flex;
         align-items: center;
-  }
-  .col-sm-8 {
+    }
+    .col-sm-8 {
         justify-content: center;
-    }    
+    }
 }
 
 #bottom-left {
@@ -444,116 +413,117 @@ min-height: 16vh;
 //######### Settings Switch #########//
 
 /* The switch - the box around the slider (label) */
+
 .switch {
-  display: inline-block;
-  width: 30px;
-  height: 17px;
-  position: relative;
-  /* Hide default HTML checkbox (label > input) */
-  input {display:none;}
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+    position: relative;
+    /* Hide default HTML checkbox (label > input) */
+    input {
+        display: none;
+    }
 }
+
 
 /* The slider */
-.slider { 
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
 
-  &:before {
+.slider {
     position: absolute;
-    content: "";
-    height: 13px;
-    width: 13px;
-    left: 2px;
-    bottom: 2px;
-    background-color: white;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
-  }
+    &:before {
+        position: absolute;
+        content: "";
+        height: 13px;
+        width: 13px;
+        left: 2px;
+        bottom: 2px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
 }
 
-input:checked + .slider {
-  background-color: #2196F3;
+input:checked+.slider {
+    background-color: #2196F3;
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked + .slider:before {
-  -webkit-transform: translateX(13px);
-  -ms-transform: translateX(13px);
-  transform: translateX(13px);
+input:checked+.slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
 }
+
 
 /* Rounded sliders */
+
 .slider.round {
-  border-radius: 17px;
-  &:before {
-    border-radius: 50%;
-  }
+    border-radius: 17px;
+    &:before {
+        border-radius: 50%;
+    }
 }
 
 //######### Settings Dropup Menu #########//
-
 .settings-dropup {
-  width: 300px;
-
-  // Delete and style in .dropdown-menu
-  background: rgb(0,0,0); // fallback
-  background: rgba(0,0,0,0.8);
-
-  li a {
-    color: $color-white; 
-    opacity: 0.8;
-    &:hover {
-      background-color: initial;
-      color: $color-white;   
-      opacity: 1;
+    width: 300px; // Delete and style in .dropdown-menu
+    background: rgb(0, 0, 0); // fallback
+    background: rgba(0, 0, 0, 0.8);
+    li a {
+        color: $color-white;
+        opacity: 0.8;
+        &:hover {
+            background-color: initial;
+            color: $color-white;
+            opacity: 1;
+        }
     }
-  }
-
 }
 
 .settings-flex-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 //######### Main Focus #########//
-
 .focusBox {
-  display: flex;
-  justify-content: center;
-  font-size: $font-size-h3;
+    display: flex;
+    justify-content: center;
+    font-size: $font-size-h3;
 }
+
 .focusItem {
-  padding: 0px 20px;
+    padding: 0px 20px;
 }
 
 .strike {
-  text-decoration: line-through;
+    text-decoration: line-through;
 }
 
 .focusCheckbox {
-  cursor: hand;
-  cursor: pointer;
-  &:hover {
-    color: #25b99a;
-  }
+    cursor: hand;
+    cursor: pointer;
+    &:hover {
+        color: #25b99a;
+    }
 }
 
 .focusTrash {
-  cursor: hand;
-  cursor: pointer;
-  &:hover {
-    color: #e85656;
-  }
+    cursor: hand;
+    cursor: pointer;
+    &:hover {
+        color: #e85656;
+    }
 }

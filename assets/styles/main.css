@@ -403,6 +403,12 @@ body {
     bottom: 0;
     top: 0;*/ }
 
+h1,
+h2,
+h3,
+p {
+  font-family: 'Lato', sans-serif; }
+
 #center {
   display: block;
   top: 50%;
@@ -736,7 +742,15 @@ body {
   min-height: 11vh; }
 
 #main-box {
-  min-height: 73vh; }
+  min-height: 83vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 #footer {
   min-height: 16vh; }
@@ -751,7 +765,8 @@ body {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row; }
-  .v-adjust [class^="col-"], .v-adjust [class*="col-"] {
+  .v-adjust [class^="col-"],
+  .v-adjust [class*="col-"] {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;

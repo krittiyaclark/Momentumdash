@@ -6,38 +6,44 @@
 }
 
 @mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
 }
 
 @mixin placeholder {
     &::-webkit-input-placeholder {
         @content;
     }
-
-    &:-moz-placeholder { /* Firefox 18- */
+    &:-moz-placeholder {
+        /* Firefox 18- */
         @content;
     }
-
-    &::-moz-placeholder {  /* Firefox 19+ */
+    &::-moz-placeholder {
+        /* Firefox 19+ */
         @content;
     }
-
     &:-ms-input-placeholder {
         @content;
     }
 }
 
-@mixin even(){
-  &:nth-child(even) {
-    @content
-  }
+@mixin even() {
+    &:nth-child(even) {
+        @content;
+    }
 }
 
-@mixin odd(){
-  &:nth-child(odd) {
-    @content
-  }
+@mixin odd() {
+    &:nth-child(odd) {
+        @content;
+    }
+}
+
+@mixin opacity($value) {
+    $IEValue: $value*100;
+    opacity: $value;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+    filter: alpha(opacity=$IEValue);
 }
