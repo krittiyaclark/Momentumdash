@@ -373,18 +373,21 @@ p {
 }
 
 //######### Mobile View Footer Position #########//
-#top {
-    min-height: 11vh;
-}
+.mainTop {
+    min-height: 93vh;
+    display: flex;
+    flex-direction: column;
+    }
 
 #main-box {
-    min-height: 83vh;
     display: flex;
+    flex: 1;
+    flex-direction: row;
     align-items: center;
 }
 
-#footer {
-    min-height: 16vh;
+#footer .row {
+    max-height: 6vh;
 }
 
 //######### Footer - Vertical Alignment #########// 
