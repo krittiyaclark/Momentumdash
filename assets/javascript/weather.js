@@ -24,34 +24,34 @@ $(document).ready(function() {
                                
                 switch (mainDescrip) {
                     case "Clear":
-                    document.getElementById("weatherIcon").src = "https://res.cloudinary.com/t3unfxn28/image/upload/v1501813445/Momentum/simple_weather_icon_01.png";
+                    document.getElementById("weatherIcon").src = "./assets/images/simple_weather_icon_01.png";
                     break;
                     case "Clouds":
-                    document.getElementById("weatherIcon").src = "https://res.cloudinary.com/t3unfxn28/image/upload/v1501813445/Momentum/simple_weather_icon_06.png";
+                    document.getElementById("weatherIcon").src = "../images/simple_weather_icon_06.png";
                     break;
                     case "Atmosphere":
-                    document.getElementById("weatherIcon").src = "https://res.cloudinary.com/t3unfxn28/image/upload/v1501813445/Momentum/simple_weather_icon_10.png";
+                    document.getElementById("weatherIcon").src = "./assets/images/simple_weather_icon_10.png";
                     break;
                     case "Drizzle":
-                    document.getElementById("weatherIcon").src = "https://res.cloudinary.com/t3unfxn28/image/upload/v1501813445/Momentum/simple_weather_icon_22.png";
+                    document.getElementById("weatherIcon").src = "./assets/images/simple_weather_icon_22.png";
                     break;
                     case "Rain":
-                    document.getElementById("weatherIcon").src = "https://res.cloudinary.com/t3unfxn28/image/upload/v1501813445/Momentum/simple_weather_icon_23.png";
+                    document.getElementById("weatherIcon").src = "./assets/images/simple_weather_icon_23.png";
                     break;
                     case "Thunderstorm":
-                    document.getElementById("weatherIcon").src = "https://res.cloudinary.com/t3unfxn28/image/upload/v1501813445/Momentum/simple_weather_icon_27.png";
+                    document.getElementById("weatherIcon").src = "./assets/images/simple_weather_icon_27.png";
                     break;
                     case "Snow":
-                    document.getElementById("weatherIcon").src = "https://res.cloudinary.com/t3unfxn28/image/upload/v1501813445/Momentum/simple_weather_icon_24.png";
+                    document.getElementById("weatherIcon").src = "./assets/images/simple_weather_icon_24.png";
                     break;
                     case "Extreme":
-                    document.getElementById("weatherIcon").src = "https://res.cloudinary.com/t3unfxn28/image/upload/v1501813445/Momentum/simple_weather_icon_24.png";
+                    document.getElementById("weatherIcon").src = "./assets/images/simple_weather_icon_24.png";
                     break;
                     case "Additional":
-                    document.getElementById("weatherIcon").src = "https://res.cloudinary.com/t3unfxn28/image/upload/v1501813445/Momentum/simple_weather_icon_03.png";
+                    document.getElementById("weatherIcon").src = "./assets/images/simple_weather_icon_03.png";
                     break;
                     default:
-                    document.getElementById("weatherIcon").src = "https://res.cloudinary.com/t3unfxn28/image/upload/v1501813445/Momentum/simple_weather_icon_01.png";
+                    document.getElementById("weatherIcon").src = "./assets/images/simple_weather_icon_01.png";
                 } 
             
                 $('#temp-checkbox').change(function() {
