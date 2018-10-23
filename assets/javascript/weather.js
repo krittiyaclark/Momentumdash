@@ -27,7 +27,7 @@ $(document).ready(function() {
                     document.getElementById("weatherIcon").src = "./assets/images/simple_weather_icon_01.png";
                     break;
                     case "Clouds":
-                    document.getElementById("weatherIcon").src = "../images/simple_weather_icon_06.png";
+                    document.getElementById("weatherIcon").src = "./assets/images/simple_weather_icon_06.png";
                     break;
                     case "Atmosphere":
                     document.getElementById("weatherIcon").src = "./assets/images/simple_weather_icon_10.png";
